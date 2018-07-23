@@ -27,7 +27,7 @@
 		<div class="container">
 			<div class="col-xs-8 header-bottom-left">
 				<div class="col-xs-2 logo">
-					<h1><a href="#"><span>Buy</span>shop</a></h1>
+					<h1><a href="#"><span>Guitar</span>shop</a></h1>
 				</div>
 				<div class="col-xs-6 menu">
 					<ul class="megamenu skyblue">
@@ -66,25 +66,25 @@
 			  </ul> 
 			</div>
 		</div>
-            <div class="col-xs-4 ">
-	       <div class="box_1-cart">
-		     <div class="box_11"><a href="Cart.aspx">
-		      <h4><p>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><img src="images/bag.png" alt=""/><div class="clearfix"> </div></h4>
-		      </a></div>
-	          <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-	          <div class="clearfix"> </div>
-	        </div>
-	        <div class="search">	  
+			<div class="col-xs-4 ">
+		   <div class="box_1-cart">
+			 <div class="box_11"><a href="Cart.aspx">
+			  <h4><p>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><img src="images/bag.png" alt=""/><div class="clearfix"> </div></h4>
+			  </a></div>
+			  <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+			  <div class="clearfix"> </div>
+			</div>
+			<div class="search">	  
 				<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 				<input type="submit" value="Subscribe" id="submit" name="submit">
 				<div id="response"> </div>
-		     </div>
-	       <div class="clearfix"></div>
-         </div>
+			 </div>
+		   <div class="clearfix"></div>
+		 </div>
 	 </div>
 		<div class ="sp-content">
 			<div class="container">
-                <% foreach (var item in list) { %>
+				<% foreach (var item in list) { %>
 				<div class="sp1">
 					<div class="container-sp2">
 						<div class="img-sp1">
@@ -104,7 +104,7 @@
 							</div>
 							<div class="infor-sp1-r">
 								<p><%=item.Price %>d</p>
-								<button type="">XEM</button>
+								<button id="button">XEM</button>
 							</div>
 							<div class="clear"></div>
 						</div>

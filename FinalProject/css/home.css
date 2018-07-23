@@ -1,0 +1,54 @@
+.sp-content{
+	margin-top: 40px;
+}
+.sp1{
+    margin-top: 15px;
+	margin: 15px;
+	border: 1px solid;
+	float: left;
+	width: 45%;
+	height: 420px;
+}
+.container-sp2{
+	margin-left: 50px;
+	width: 400px;
+	height: 430px;
+}
+.container-sp2 table td tr{
+ 	font-size: 13px;
+ 	font-weight: bold;
+}
+.img-sp1 img{
+	width: 400px;
+	height: 300px;
+} 
+.img-sp1 p{
+	font-size: 16px;
+	font-weight: bold;
+}
+.infor-sp1-I{
+	float: left;
+}
+.infor-sp1-r{
+	float: left;
+	margin-left: 80px;
+}
+.infor-sp1-r p{
+	font-size: 17px;
+	color: red;
+	font-weight: bold;
+}
+.infor-sp1-r button{
+	width: 120px;
+	height: 40px;
+	color:white;
+	font-size: 14px;
+	font-size: bold;
+	background: #00FF00;
+	border-radius: 10px 10px 10px 10px;
+	float: right;
+}
+.main-img{
+	height: 410px;
+	width: 314px;	
+}

@@ -147,7 +147,9 @@
     <Content Include="Login.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="ViewOrders.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\ProductDAO.cs" />

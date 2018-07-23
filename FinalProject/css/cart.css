@@ -1,0 +1,73 @@
+.sp-content{
+	margin-top: 40px;
+}
+.sp1{
+	margin: 15px;
+	float: left;
+	width: 10%;
+	height: 120px;
+}
+.container-sp2{
+	margin-left: 0px;
+	width: 300px;
+	height: 120px;
+}
+.container-sp2 input{
+	
+	width: 40%;
+	
+}
+.container-sp2 table td tr{
+ 	font-size: 13px;
+ 	font-weight: bold;
+}
+.img-sp1 img{
+	height: 110px;
+	width: 106px;	
+} 
+.img-sp1 p{
+	font-size: 16px;
+	font-weight: bold;
+}
+.infor-sp1-I{
+	float: left;
+}
+
+.infor-sp1-r {
+	font-size: 17px;
+	color: red;
+	font-weight: bold;
+}
+.infor-sp1-r button{
+	width: 120px;
+	height: 40px;
+	color:white;
+	font-size: 14px;
+	font-size: bold;
+	background: #00FF00;
+	border-radius: 10px 10px 10px 10px;
+	margin-left: 100px;
+}
+
+.input-quality{
+	display: flex;
+    align-items: center;
+}
+
+.input-quality .button-outline{
+	width: 3.2rem;
+	height: 3.2rem;
+}
+.input-quality .button-outline-mid{
+	width: 5rem;
+	height: 3.2rem;
+	border-left: none;
+	border-right: none;
+	font-size: 1.6rem;
+	font-weight: 400;
+	box-sizing: border-box;
+	text-align: center;
+	cursor: text;
+	border-radius: 0;
+}
+

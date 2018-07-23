@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="FinalProject.Home1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="FinalProject.Home" %>
 
 <!DOCTYPE html>
 <html>
@@ -15,28 +15,23 @@
 <div class="header_top">
 	<div class="container">
 		<div class="one-fifth column row_1">
-			<span class="selection-box"><select class="domains valid" name="domains">
-			   <option>English</option>
-			   <option>French</option>
-			   <option>German</option>
-			</select></span>
+			
 		 </div>
 		 <div class="cssmenu">
 			<ul>
-			   <li class="active"><a href="login.html">My Account</a></li> 
+			   <li class="active"><a href="Login.aspx">My Account</a></li> 
 			</ul>
 		 </div>
 	</div>
-</div>	
  <div class="header_bottom men_border">
 		<div class="container">
 			<div class="col-xs-8 header-bottom-left">
 				<div class="col-xs-2 logo">
-					<h1><a href="index.html"><span>Buy</span>shop</a></h1>
+					<h1><a href="#"><span>Buy</span>shop</a></h1>
 				</div>
 				<div class="col-xs-6 menu">
 					<ul class="megamenu skyblue">
-					  <li><a class="color1" href="guitar.aspx">Guitar</a><div class="megapanel">
+					  <li><a class="color1" href="Home.aspx">Guitar</a><div class="megapanel">
 						<div class="row">
 							<div class="col1">
 								<div class="h_nav">
@@ -49,7 +44,7 @@
 						  </div>
 						</div>
 					</li>
-					<li class="grid"><a class="color2" href="#">Other</a>
+					<li class="grid"><a class="color2" href="Other.aspx">Other</a>
 					  <div class="megapanel">
 						<div class="row">
 							<div class="col1">
@@ -67,81 +62,58 @@
 						  </div>
 						</div>
 				</li>
-				<li><a class="color6" href="contact.html">Support</a></li>
+				<li><a class="color6" href="#">Support</a></li>
 			  </ul> 
 			</div>
 		</div>
-		<div class="col-xs-4 ">
-		   <div class="box_1-cart">
-			 <div class="box_11"><a href="Cart.aspx">
-			  <h4><p>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><img src="images/bag.png" alt=""/><div class="clearfix"> </div></h4>
-			  </a></div>
-			  <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-			  <div class="clearfix"> </div>
-			</div>
-			<div class="search">	  
+            <div class="col-xs-4 ">
+	       <div class="box_1-cart">
+		     <div class="box_11"><a href="Cart.aspx">
+		      <h4><p>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><img src="images/bag.png" alt=""/><div class="clearfix"> </div></h4>
+		      </a></div>
+	          <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+	          <div class="clearfix"> </div>
+	        </div>
+	        <div class="search">	  
 				<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 				<input type="submit" value="Subscribe" id="submit" name="submit">
 				<div id="response"> </div>
-			 </div>
-		   <div class="clearfix"></div>
-		 </div>
-		<div class="clearfix"></div>
+		     </div>
+	       <div class="clearfix"></div>
+         </div>
 	 </div>
 		<div class ="sp-content">
 			<div class="container">
+                <% foreach (var item in list) { %>
 				<div class="sp1">
 					<div class="container-sp2">
 						<div class="img-sp1">
-							<img src="#" alt="#">
-							<p> Ten San Pham </p>
+							<img src="<%= item.Image %>" alt="#">
+							<p> <%= item.Name %> </p>
 						</div>
 						<div class = "infor-sp1">
 							<div class="infor-sp1-I">
 								<table>
 									<tr>
 										<td>Gia Tri: </td>
-										<td style="text-decoration: line-through;padding-left: 5px;">200.000d</td>
+										
 									</tr>
 								</table>
 								<br>
-								<img src="#">
+								
 							</div>
 							<div class="infor-sp1-r">
-								<p>1.500.000d</p>
+								<p><%=item.Price %>d</p>
 								<button type="">XEM</button>
 							</div>
 							<div class="clear"></div>
 						</div>
 					</div>
 				</div>
-				<div class="sp1">
-					<div class="container-sp2">
-						<div class="img-sp1">
-							<img src="#" alt="#">
-							<p> Ten San Pham </p>
-						</div>
-						<div class = "infor-sp1">
-							<div class="infor-sp1-I">
-								<table>
-									<tr>
-										<td>Gia Tri: </td>
-										<td style="text-decoration: line-through;padding-left: 5px;">200.000d</td>
-									</tr>
-								</table>
-								<br>
-								<img src="#">
-							</div>
-							<div class="infor-sp1-r">
-								<p>1.500.000d</p>
-								<button type="">XEM</button>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
+				 <% } %>
 			</div>
 		</div>
+	 </div>
 	 <div class="footer">
 	<div class="container">
 	   <div class="footer_top">

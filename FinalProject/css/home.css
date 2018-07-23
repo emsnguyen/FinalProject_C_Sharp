@@ -2,7 +2,6 @@
 	margin-top: 40px;
 }
 .sp1{
-    margin-top: 15px;
 	margin: 15px;
 	border: 1px solid;
 	float: left;
@@ -47,8 +46,4 @@
 	background: #00FF00;
 	border-radius: 10px 10px 10px 10px;
 	float: right;
-}
-.main-img{
-	height: 410px;
-	width: 314px;	
 }

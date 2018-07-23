@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="FinalProject.singleIndex" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,31 +11,28 @@
 
 </head>
 <body>
+    <form id="form1" runat="server">
 <div class="header_top">
 	<div class="container">
 		<div class="one-fifth column row_1">
-			<span class="selection-box"><select class="domains valid" name="domains">
-		       <option>English</option>
-		       <option>French</option>
-		       <option>German</option>
-		    </select></span>
-         </div>
-         <div class="cssmenu">
+			
+		 </div>
+		 <div class="cssmenu">
 			<ul>
-			   <li class="active"><a href="login.html">My Account</a></li> 
+			   <li class="active"><a href="Login.aspx">My Account</a></li> 
 			</ul>
 		 </div>
 	</div>
 </div>	
  <div class="header_bottom men_border">
-	    <div class="container">
+		<div class="container">
 			<div class="col-xs-8 header-bottom-left">
 				<div class="col-xs-2 logo">
-					<h1><a href="index.html"><span>Buy</span>shop</a></h1>
+					<h1><a href="#"><span>Buy</span>shop</a></h1>
 				</div>
 				<div class="col-xs-6 menu">
-		            <ul class="megamenu skyblue">
-				      <li><a class="color1" href="guitar.aspx">Guitar</a><div class="megapanel">
+					<ul class="megamenu skyblue">
+					  <li><a class="color1" href="Home.aspx">Guitar</a><div class="megapanel">
 						<div class="row">
 							<div class="col1">
 								<div class="h_nav">
@@ -49,7 +45,7 @@
 						  </div>
 						</div>
 					</li>
-				    <li class="grid"><a class="color2" href="#">Other</a>
+					<li class="grid"><a class="color2" href="Other.aspx">Other</a>
 					  <div class="megapanel">
 						<div class="row">
 							<div class="col1">
@@ -66,12 +62,12 @@
 							</div>
 						  </div>
 						</div>
-			    </li>
-				<li><a class="color6" href="contact.html">Support</a></li>
+				</li>
+				<li><a class="color6" href="#">Support</a></li>
 			  </ul> 
 			</div>
 		</div>
-	    <div class="col-xs-4 ">
+            <div class="col-xs-4 ">
 	       <div class="box_1-cart">
 		     <div class="box_11"><a href="Cart.aspx">
 		      <h4><p>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><img src="images/bag.png" alt=""/><div class="clearfix"> </div></h4>
@@ -92,8 +88,8 @@
 	 		<div class="container">
 	 			<div class="sp1">
 	 				<div class="container-sp2">
-						<div class="main-img">
-							<img src="#" alt="#">
+						<div class="img-sp1">
+							<img src="https://1.bp.blogspot.com/-hK6hMiPhmwk/W1Gj9xu_LWI/AAAAAAAAHiE/uHu-TJQyuxY6FLQi0ap4AyH1F4WNKxuKgCLcBGAs/s1600/0002.jpg?imgmax=0" alt="#">
 						</div>
 	 				</div>
 	 			</div>
@@ -194,5 +190,6 @@
 	    </div>
 	</div>
 </div>
+     </form>
 </body>
 </html>

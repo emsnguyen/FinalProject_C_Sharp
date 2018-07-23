@@ -35,6 +35,7 @@ namespace FinalProject.DAL
             while (reader.Read())
             {
                 Models.Product p = new Models.Product();
+                p.SubCategory = new Models.SubCategory();
                 p.ID = Convert.ToInt32(reader["ID"].ToString());
                 p.Name = reader["Name"].ToString();
                 p.DateImported = DateTime.Parse(reader["DateImported"].ToString());
@@ -42,6 +43,7 @@ namespace FinalProject.DAL
                 p.TotalSold = Convert.ToInt32(reader["TotalSold"].ToString());
                 p.TotalLeft = Convert.ToInt32(reader["TotalLeft"].ToString());
                 p.Image = reader["Image"].ToString();
+                
                 p.SubCategory.ID = Convert.ToInt32(reader["SubCategoryID"].ToString());
                 p.MakerID = Convert.ToInt32(reader["MakerID"].ToString());
                 p.Price = Convert.ToDouble(reader["Price"].ToString());

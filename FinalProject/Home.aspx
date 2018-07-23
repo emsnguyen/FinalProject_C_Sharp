@@ -90,56 +90,33 @@
 	 </div>
 		<div class ="sp-content">
 			<div class="container">
+                <% foreach (var item in list) { %>
 				<div class="sp1">
 					<div class="container-sp2">
 						<div class="img-sp1">
-							<img src="#" alt="#">
-							<p> Ten San Pham </p>
+							<img src="<%= item.Image %>" alt="#">
+							<p> <%= item.Name %> </p>
 						</div>
 						<div class = "infor-sp1">
 							<div class="infor-sp1-I">
 								<table>
 									<tr>
 										<td>Gia Tri: </td>
-										<td style="text-decoration: line-through;padding-left: 5px;">200.000d</td>
+										
 									</tr>
 								</table>
 								<br>
-								<img src="#">
+								
 							</div>
 							<div class="infor-sp1-r">
-								<p>1.500.000d</p>
+								<p><%=item.Price %>d</p>
 								<button type="">XEM</button>
 							</div>
 							<div class="clear"></div>
 						</div>
 					</div>
 				</div>
-				<div class="sp1">
-					<div class="container-sp2">
-						<div class="img-sp1">
-							<img src="https://guitar.station.vn/wp-content/uploads/2018/06/Fender-FA-100-Dreadnought-Acoustic-Guitar-with-Gig-Bag-Natural-0-360x360.jpg" alt="#">
-							<p> Ten San Pham </p>
-						</div>
-						<div class = "infor-sp1">
-							<div class="infor-sp1-I">
-								<table>
-									<tr>
-										<td>Gia Tri: </td>
-										<td style="text-decoration: line-through;padding-left: 5px;">200.000d</td>
-									</tr>
-								</table>
-								<br>
-								<img src="#">
-							</div>
-							<div class="infor-sp1-r">
-								<p>1.500.000d</p>
-								<button type="abc">XEM</button>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
+				 <% } %>
 			</div>
 		</div>
 	 </div>

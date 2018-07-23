@@ -118,7 +118,7 @@
 				<div class="sp1">
 					<div class="container-sp2">
 						<div class="img-sp1">
-							<img src="#" alt="#">
+							<img src="https://guitar.station.vn/wp-content/uploads/2018/06/Fender-FA-100-Dreadnought-Acoustic-Guitar-with-Gig-Bag-Natural-0-360x360.jpg" alt="#">
 							<p> Ten San Pham </p>
 						</div>
 						<div class = "infor-sp1">

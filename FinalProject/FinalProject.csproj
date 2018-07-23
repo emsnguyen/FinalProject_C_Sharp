@@ -150,8 +150,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DataConnect.cs" />
     <Compile Include="DAL\ProductDAO.cs" />
-    <Compile Include="DataContext\DataConnection.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

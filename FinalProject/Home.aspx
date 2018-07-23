@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="FinalProject.Home1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="FinalProject.Home" %>
 
 <!DOCTYPE html>
 <html>
@@ -74,7 +74,7 @@
 		<div class="col-xs-4 ">
 		   <div class="box_1-cart">
 			 <div class="box_11"><a href="Cart.aspx">
-			  <h4><p>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><img src="images/bag.png" alt=""/><div class="clearfix"> </div></h4>
+			  <h4>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)<img src="images/bag.png" alt=""/></h4>
 			  </a></div>
 			  <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 			  <div class="clearfix"> </div>
@@ -134,7 +134,7 @@
 							</div>
 							<div class="infor-sp1-r">
 								<p>1.500.000d</p>
-								<button type="">XEM</button>
+								<button type="abc">XEM</button>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -142,6 +142,7 @@
 				</div>
 			</div>
 		</div>
+	 </div>
 	 <div class="footer">
 	<div class="container">
 	   <div class="footer_top">

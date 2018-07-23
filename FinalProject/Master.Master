@@ -15,7 +15,7 @@
 </head>
 <body>
 	<form id="form1" runat="server">
-	   <div class="header_top">
+	   <div class="header_top"/>
 	<div class="container">
 		<div class="one-fifth column row_1">
 			<span class="selection-box"><select class="domains valid" name="domains">
@@ -30,7 +30,6 @@
 			</ul>
 		 </div>
 	</div>
-</div>	
  <div class="header_bottom men_border">
 		<div class="container">
 			<div class="col-xs-8 header-bottom-left">

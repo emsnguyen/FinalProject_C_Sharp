@@ -14,8 +14,8 @@ namespace FinalProject.DAL
         {
             List<Models.Product> list = new List<Models.Product>();
             SqlDataAdapter da = new SqlDataAdapter();
-            
-            
+
+            return list;
         } 
 
     }

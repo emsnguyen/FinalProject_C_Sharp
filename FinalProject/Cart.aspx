@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="FinalProject.singleIndex" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="FinalProject.Cart" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +8,12 @@
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 	<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/singleIndex.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/cart.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 <body>
-    <form id="form1" runat="server">
-<div class="header_top">
+    <form>
+   <div class="header_top">
 	<div class="container">
 		<div class="one-fifth column row_1">
 			
@@ -88,6 +89,63 @@
 	 		<div class="container">
 	 			<div class="sp1">
 	 				<div class="container-sp2">
+							<input type="checkbox">
+	 				</div>
+	 			</div>
+	 			<div class="sp1">
+	 				<div class="container-sp2">
+						<div class="img-sp1">
+								Sản Phẩm
+						</div>
+	 				</div>
+	 			</div>
+	 			<div class="sp1">
+	 				<div class="container-sp2">
+						
+							
+					</div>
+				</div>
+							
+								<div class="sp1">
+	 				<div class="container-sp2">
+								<p style="padding-left: 35px;">Đơn giá</p>
+								
+								</div>
+						</div>
+						<div class="sp1">
+	 				<div class="container-sp2">
+								<div class="input-quality" > 
+								<p style="padding-left: 75px;">Số lượng</p>
+							</div>
+							</div>
+						</div>
+						<div class="sp1">
+	 				<div class="container-sp2">
+						
+								<p style="font-size: 17px;font-weight: bold;color: red;padding-left: 105px;">
+							Số tiền
+							</p>
+					</div>
+				</div>
+					<div class="sp1">
+	 				<div class="container-sp2">
+						
+								<a  style="font-size: 17px;padding-left: 110px;">
+							 Thao tác
+							</a>
+					</div>
+				</div>
+
+
+
+				<!-- bắt đầu vòng lặp từ đây -->
+	 			<div class="sp1">
+	 				<div class="container-sp2">
+							<input type="checkbox">
+	 				</div>
+	 			</div>
+	 			<div class="sp1">
+	 				<div class="container-sp2">
 						<div class="img-sp1">
 							<img src="https://1.bp.blogspot.com/-hK6hMiPhmwk/W1Gj9xu_LWI/AAAAAAAAHiE/uHu-TJQyuxY6FLQi0ap4AyH1F4WNKxuKgCLcBGAs/s1600/0002.jpg?imgmax=0" alt="#">
 						</div>
@@ -95,45 +153,114 @@
 	 			</div>
 	 			<div class="sp1">
 	 				<div class="container-sp2">
-						<div class="img-sp1">
-							<p> Ten San Pham <!-- Dien ten san pham thay cho nay --> </p>
+						
+								<p>
+							 Ten San Pham <!-- Dien ten san pham thay cho nay --> 
+							</p>
+					</div>
+				</div>
+							
+								<div class="sp1">
+	 				<div class="container-sp2">
+									<table>
+										<tr>
+											<td style="padding-left: 10px;" >Gia Tri: </td>
+											<td style="	padding-left: 5px;">200.000d</td>
+										</tr>
+									</table>
+								</div>
 						</div>
-						<div class = "infor-sp1">
-							<div class="infor-sp1-I">
-								<table>
-									<tr>
-										<td>Gia Tri: </td>
-										<td style="text-decoration: line-through;padding-left: 5px;">200.000d</td>
-									</tr>
-								</table>
-							</div>
-							<div class="infor-sp1-r">
-								<p>1.500.000d</p>
-								<br>
-							</div>
-							<br>
-							<br>
-							<br>
-							<p><span style="font-weight: lighter; font-size: 13px;">Miễn Phí Vận Chuyển khi đạt mức giá trị đơn hàng tối thiểu</span></p>
-							<p><span style="font-weight: lighter; font-size: 13px;">Vẫn chuyển tới: </span></p>
-							<p><span style="font-weight: lighter; font-size: 13px;">Phí chuyển tới: </span></p>
-
-							<div class="input-quality">
+						<div class="sp1">
+	 				<div class="container-sp2">
+								<div class="input-quality" style="padding-left: 50px;"> 
 								<button class="button-outline">-</button>
 								<input class="button-outline button-outline-mid" type="" name="" value="1">
 								<button class="button-outline">+</button>
 							</div>
-							<div class="infor-sp1-r" style="margin-left: 0px">
-								<br>
-							<button  style="background: #ff0033" type="">MUA NGAY</button>
-							<button style="background: #794044">THÊM VÀO GIỎ HÀNG</button>
 							</div>
-							<div class="clear"></div>
+						</div>
+						<div class="sp1">
+	 				<div class="container-sp2">
+						
+								<p style="font-size: 17px;font-weight: bold;color: red;padding-left: 100px;">
+							 1.500.00d 
+							</p>
+					</div>
+				</div>
+					<div class="sp1">
+	 				<div class="container-sp2">
+						
+								<a  style="font-size: 17px;padding-left: 130px;">
+							 Xóa
+							</a>
+					</div>
+				</div>
+				<!-- kết thúc vòng for	 -->
+								
+							
+<div class="sp1">
+	 				<div class="container-sp2">
+							<input type="checkbox">
+	 				</div>
+	 			</div>
+	 			<div class="sp1">
+	 				<div class="container-sp2">
+						<div class="img-sp1">
+								Chọn tất cả sản phẩm
 						</div>
 	 				</div>
 	 			</div>
-	 		</div>
-	 	</div>
+	 			<div class="sp1">
+	 				<div class="container-sp2">
+						
+							
+					</div>
+				</div>
+							
+								<div class="sp1">
+	 				<div class="container-sp2">
+								
+								
+								</div>
+						</div>
+						<div class="sp1">
+	 				<div class="container-sp2">
+								<div class="input-quality" > 
+								<p style="padding-left: 75px;">Tổng số tiền</p>
+							</div>
+							</div>
+						</div>
+						<div class="sp1">
+	 				<div class="container-sp2">
+						
+								<p style="font-size: 17px;font-weight: bold;color: red;padding-left: 105px;">
+							$60000
+							</p>
+					</div>
+				</div>
+					<div class="sp1">
+	 				<div class="container-sp2">
+						
+								<div class="infor-sp1-r">
+									<button>Mua Hàng</button>
+								</div>
+							
+							
+					</div>
+				</div>
+
+						</div>
+					</div>
+					
+					
+							
+						
+							
+							
+							
+					
+	 			
+	 	
 	 <div class="footer">
 	<div class="container">
 	   <div class="footer_top">

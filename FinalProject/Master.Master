@@ -73,10 +73,12 @@
 			  </ul> 
 			</div>
 		</div>
+			</div>
 		<div>
 			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 			</asp:ContentPlaceHolder>
 		</div>
+	 </div>
 	 <div class="footer">
 	<div class="container">
 	   <div class="footer_top">
@@ -126,14 +128,14 @@
 			</ul>
 			<div class="clearfix"> </div>
 		</div>
-		<div class="clearfix"> </div>
+		<div class="clearfix"></div>
 		</div>
 		<div class="footer_bottom">
 			<div class="copy">
 			</div>
 		</div>
 	</div>
-</div>
 </form>
+    <a href="Login.aspx">Login.aspx</a>
 </body>
 </html>

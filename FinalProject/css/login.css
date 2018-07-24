@@ -131,6 +131,8 @@ body a{
 }
 .cssmenu {
 	margin-top: 3px;
+    width: 833px;
+    height: 68px;
 }
 .cssmenu ul {
 	float: right;

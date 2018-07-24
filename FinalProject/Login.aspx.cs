@@ -42,6 +42,7 @@ namespace FinalProject
             {
                 u.ID = Convert.ToInt32(dr[0].ToString());
                 u.IsAdmin = Convert.ToBoolean(dr[3]);
+                u.UserName = dr[1].ToString();
                 return u;
             }
             return null;
@@ -58,12 +59,18 @@ namespace FinalProject
             string Password = txtPassword.Text;
             if (IsExist(Username, Password) != null)
             {
-                Session["id"] = IsExist(Username, Password).ID;
+                Session["userId"] = IsExist(Username, Password).ID;
                 Session["isAdmin"] = IsExist(Username, Password).IsAdmin;
+                Session["username"] = IsExist(Username, Password).UserName;
+                if (IsExist(Username, Password).IsAdmin)
+                {
+                    Response.Redirect("ViewOrders.aspx");
+                    return;
+                }
                 Response.Redirect("Home.aspx");
             } else
             {
-                MsgBox("Incorrect username or password!", this.Page, this);
+                lblMessage.Text = "Incorrect username or password!";
             }
         }
     }

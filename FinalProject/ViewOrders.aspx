@@ -4,6 +4,39 @@
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="css/ViewOrders.css" rel="stylesheet" />
     <div>
-        <asp:GridView ID="gvOrders" CssClass="table-order" runat="server"></asp:GridView>
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer ID</th>
+                <th>Total</th>
+                <th>Payment Method</th>
+                <th>Payment Status</th>
+            </tr>
+            <%
+                foreach (var item in orders)
+                {
+            %>
+            <tr>
+                <% int orderID = item.Order_Pay.ElementAt(0).OrderID; %>
+                <td>
+                    <%= orderID %>
+                </td>
+                <td>
+                    <%= item.UserID %>
+                </td>
+                <td>
+                    <%= item.Total %>
+                </td>
+                <td>
+                    <%= item.Order_Pay.ElementAt(0).PaymentMethod.PaymentMethod1 %>
+                </td>
+                <td>
+                    <%= orderID %>
+                    <asp:CheckBox ID="abc" runat="server" Checked="true" />
+                </td>
+            </tr>
+            <%} %>
+        </table>
+
     </div>
 </asp:Content>

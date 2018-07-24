@@ -93,14 +93,14 @@
 				<div class="sp1">
 					<div class="container-sp2">
 						<div class="main-img">
-							<img src="#" alt="#">
+							<img src="<%=product.Image%>" alt="#">
 						</div>
 					</div>
 				</div>
 				<div class="sp1">
 					<div class="container-sp2">
 						<div class="img-sp1">
-							<p> Ten San Pham <!-- Dien ten san pham thay cho nay --> </p>
+							<p> <%=product.Name %> <!-- Dien ten san pham thay cho nay --> </p>
 						</div>
 						<div class = "infor-sp1">
 							<div class="infor-sp1-I">
@@ -112,7 +112,7 @@
 								</table>
 							</div>
 							<div class="infor-sp1-r">
-								<p>1.500.000d</p>
+								<p><%=product.Price %> VND</p>
 								<br>
 							</div>
 							<br>

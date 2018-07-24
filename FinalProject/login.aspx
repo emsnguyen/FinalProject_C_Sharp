@@ -17,7 +17,12 @@
 &nbsp;</div>
 				  <a class="forgot" href="#">Forgot Your Password?</a>
 				  <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
-&nbsp;</div>
+&nbsp;&nbsp;&nbsp;
+                  <br />
+                  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <asp:Label ID="lblMessage" runat="server" CssClass="error-404" ForeColor="Red"></asp:Label>
+              </div>
 			    <div class="col-md-6 login-left">
 			  	 <h3>NEW CUSTOMERS</h3>
 				 <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>

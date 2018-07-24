@@ -44,7 +44,7 @@
 		<div class="container">
 			<div class="col-xs-8 header-bottom-left">
 				<div class="col-xs-2 logo">
-					<h1><a href="index.html"><span>Buy</span>shop</a></h1>
+					<h1><a href="Home.aspx"><span>Buy</span>shop</a></h1>
 				</div>
 				<div class="col-xs-6 menu">
 					<ul class="megamenu skyblue">

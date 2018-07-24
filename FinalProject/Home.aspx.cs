@@ -18,12 +18,18 @@ namespace FinalProject
                 ProductDAO productDao = new ProductDAO();
                 list = productDao.GetList10Product();
                 test = list[0];
+                DataBind();
             }
         }
 
         void LoadData()
         {
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string id = Button1.Text;
         }
     }
 }

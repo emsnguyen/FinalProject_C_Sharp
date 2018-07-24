@@ -2,16 +2,19 @@
 	margin-top: 40px;
 }
 .sp1{
+    overflow:auto;
 	margin: 15px;
 	border: 1px solid;
 	float: left;
 	width: 45%;
-	height: 420px;
+	min-height: 420px;
+    margin-bottom: 40px;
 }
-.container-sp2{
-	margin-left: 50px;
-	width: 400px;
-	height: 430px;
+.container-sp2 {
+    overflow: auto;
+    margin-left: 50px;
+    min-width: 400px;
+    min-height: 430px;
 }
 .container-sp2 table td tr{
  	font-size: 13px;
@@ -42,7 +45,7 @@
 	height: 40px;
 	color:white;
 	font-size: 14px;
-	font-size: bold;
+	font-weight:bold;
 	background: #00FF00;
 	border-radius: 10px 10px 10px 10px;
 	float: right;

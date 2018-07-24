@@ -91,7 +91,8 @@
     <Content Include="css\home.css" />
     <Content Include="css\login.css" />
     <Content Include="css\megamenu.css" />
-    <Content Include="css\singleIndex.css" />
+    <Content Include="css\Details.css" />
+    <Content Include="css\ViewOrders.css" />
     <Content Include="Other.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -219,6 +220,7 @@
     <Compile Include="Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\HtmlHelper.cs" />
     <Compile Include="ViewOrders.aspx.cs">
       <DependentUpon>ViewOrders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

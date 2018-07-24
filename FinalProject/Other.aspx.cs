@@ -13,5 +13,9 @@ namespace FinalProject
         {
 
         }
+        void LoadOther()
+        {
+
+        }
     }
 }

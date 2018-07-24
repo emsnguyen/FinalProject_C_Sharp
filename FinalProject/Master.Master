@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.Master.cs" Inherits="FinalProject.Masterr" %>
-
 <!DOCTYPE html>
 
 <html>
@@ -10,7 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/checkOut.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/singleIndex.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/Details.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 <body>
@@ -28,23 +27,10 @@
             <div class="container">
                 <div class="col-xs-8 header-bottom-left">
                     <div class="col-xs-2 logo">
-                        <h1><a href="#"><span>Guitar</span>shop</a></h1>
+                        <h1><a href="Home.aspx"><span>Home</span></a></h1>
                     </div>
                     <div class="col-xs-6 menu">
                         <ul class="megamenu skyblue">
-                            <li><a class="color1" href="Home.aspx">Guitar</a><div class="megapanel">
-                                <div class="row">
-                                    <div class="col1">
-                                        <div class="h_nav">
-                                        </div>
-                                    </div>
-                                    <div class="col1">
-                                        <div class="h_nav">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </li>
                             <li class="grid"><a class="color2" href="Other.aspx">Phụ kiện</a>
                                 <div class="megapanel">
                                     <div class="row">
@@ -63,7 +49,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a class="color6" href="#">Support</a></li>
+                            <li><a class="color6" href="ViewOrders.aspx">View Orders</a></li>
+                            <li><a class="color6" href="CheckOut.aspx">Check Out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -73,7 +60,7 @@
                             <a href="Cart.aspx">
                                 <h4>
                                     Cart: <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)
-                                    <img src="images/bag.png" alt="" /><div class="clearfix"></div>
+                                    <img src="images/bag.png" alt="" /><span class="clearfix"></span>
                                 </h4>
                             </a>
                         </div>
@@ -97,7 +84,7 @@
             <div class="container">
                 <div class="footer_top">
                     <div class="col-md-4 box_3">
-                        <h3>Các chi nhánh</h3>
+                        <h3>Liên hệ</h3>
                         <address class="address">
                             <p>Đại học FPT </p>
                             <dl>
@@ -114,13 +101,12 @@
                         </ul>
                     </div>
                     <div class="col-md-4 box_3">
-                        <h3>Blog Posts</h3>
-                        <h4><a href="#">Sed ut perspiciatis unde omnis</a></h4>
-                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced</p>
-                        <h4><a href="#">Sed ut perspiciatis unde omnis</a></h4>
-                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced</p>
-                        <h4><a href="#">Sed ut perspiciatis unde omnis</a></h4>
-                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced</p>
+                        <h3>Được tạo bởi</h3>
+                        <h4><a href="#">PhongVH</a></h4>
+                        <h4><a href="#">HuyNG</a></h4>
+                        <h4><a href="#">AnhPT</a></h4>
+                        <h4><a href="#">SonHLT</a></h4>
+                        <h4><a href="#">MienNTH</a></h4>
                     </div>
                     <div class="col-md-4 box_3">
                         <h3>Hỗ trợ</h3>
@@ -129,12 +115,6 @@
                             <li><a href="#">Các câu hỏi thường gặp</a></li>
                             <li><a href="#">Theo dõi đơn hàng</a></li>
                             <li><a href="#">Dịch vụ</a></li>
-                        </ul>
-                        <ul class="list_1">
-                            <li><a href="#">Dịch vụ</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Về chúng tôi</a></li>
-                            <li><a href="#">Liên hệ với chúng tôi</a></li>
                         </ul>
                         <div class="clearfix"></div>
                     </div>

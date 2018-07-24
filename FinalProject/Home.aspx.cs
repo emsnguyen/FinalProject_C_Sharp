@@ -21,7 +21,6 @@ namespace FinalProject
             }
         }
 
-         
         void LoadData()
         {
 

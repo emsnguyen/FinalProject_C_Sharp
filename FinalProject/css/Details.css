@@ -13,8 +13,8 @@
 	height: 420px;
 }
 .container-sp2 table td tr{
- 	font-size: 13px;
- 	font-weight: bold;
+	font-size: 13px;
+	font-weight: bold;
 }
 .img-sp1 img{
 	height: 340px;
@@ -49,8 +49,8 @@
 
 .input-quality{
 	display: flex;
-    -webkit-box-align: center;
-    align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
 }
 
 .input-quality .button-outline{

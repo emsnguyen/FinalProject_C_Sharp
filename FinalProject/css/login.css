@@ -1989,7 +1989,6 @@ a.b-home:hover{
 .login-right input[type="text"] {
 	border: 1px solid #DDDBDB;
 	outline-color:#fb4d01;
-	width: 96%;
 	font-size:0.8125em;
 	padding:10px;
 }

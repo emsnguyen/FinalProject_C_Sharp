@@ -171,7 +171,8 @@
     <Compile Include="CheckOut.aspx.designer.cs">
       <DependentUpon>CheckOut.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DAL\DataConnect.cs" />
+    <Compile Include="DAL\BaseDAO.cs" />
+    <Compile Include="DAL\OrderDAO.cs" />
     <Compile Include="DAL\ProductDAO.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -188,7 +189,6 @@
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\GuitarEntities.cs" />
     <Compile Include="Models\Maker.cs" />
     <Compile Include="Models\Order.cs" />

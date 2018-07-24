@@ -6,7 +6,7 @@ using System.Web.Configuration;
 
 namespace FinalProject.DAL
 {
-    public class DataConnect
+    public class BaseDAO
     {
         public static string connectionString = WebConfigurationManager.ConnectionStrings["connection"].ConnectionString;
     }

@@ -13,7 +13,6 @@ namespace FinalProject.Models
         }
 
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Maker> Makers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Order_Pay> Order_Pay { get; set; }
@@ -28,12 +27,6 @@ namespace FinalProject.Models
             modelBuilder.Entity<Category>()
                 .HasMany(e => e.SubCategories)
                 .WithRequired(e => e.Category)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Customer>()
-                .HasMany(e => e.Orders)
-                .WithRequired(e => e.Customer)
-                .HasForeignKey(e => e.UserID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Maker>()

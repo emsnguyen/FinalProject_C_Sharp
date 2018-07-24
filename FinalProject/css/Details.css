@@ -4,21 +4,21 @@
 .sp1{
 	margin: 15px;
 	float: left;
-	width: 20%;
-	height: 350px;
+	width: 30%;
+	height: 410px;
 }
 .container-sp2{
 	margin-left: 50px;
-	width: 300px;
-	height: 250px;
+	width: 400px;
+	height: 420px;
 }
 .container-sp2 table td tr{
- 	font-size: 13px;
- 	font-weight: bold;
+	font-size: 13px;
+	font-weight: bold;
 }
 .img-sp1 img{
-	height: 170px;
-	width: 206px;	
+	height: 340px;
+	width: 250px;	
 } 
 .img-sp1 p{
 	font-size: 16px;
@@ -49,8 +49,8 @@
 
 .input-quality{
 	display: flex;
-    -webkit-box-align: center;
-    align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
 }
 
 .input-quality .button-outline{
@@ -68,4 +68,10 @@
 	text-align: center;
 	cursor: text;
 	border-radius: 0;
+}
+.spaceingcart{
+width: 25%; position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }

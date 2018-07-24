@@ -1,20 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data;
-using System.Web.Configuration;
 using System.Data.SqlClient;
 using FinalProject.Models;
 
 namespace FinalProject.DAL
 {
-    public class ProductDAO : DataConnect
+    public class ProductDAO : BaseDAO
     {
         SqlConnection con;
-        SqlDataAdapter da;
-        DataSet ds;
-      
+        //SqlDataAdapter da;
+        //DataSet ds;
+
         // get first 10 items from table Product
         public List<Models.Product> GetList10Product()
         {
@@ -45,13 +41,13 @@ namespace FinalProject.DAL
                 p.TotalSold = Convert.ToInt32(reader["TotalSold"].ToString());
                 p.TotalLeft = Convert.ToInt32(reader["TotalLeft"].ToString());
                 p.Image = reader["Image"].ToString();
-                
+
                 p.SubCategory.ID = Convert.ToInt32(reader["SubCategoryID"].ToString());
                 p.MakerID = Convert.ToInt32(reader["MakerID"].ToString());
                 p.Price = Convert.ToDouble(reader["Price"].ToString());
                 list.Add(p);
             }
-            
+
             return list;
         }
 

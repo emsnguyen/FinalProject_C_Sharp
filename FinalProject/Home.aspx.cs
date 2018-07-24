@@ -38,7 +38,6 @@ namespace FinalProject
        
        
 
-         
         void LoadData()
         {
 

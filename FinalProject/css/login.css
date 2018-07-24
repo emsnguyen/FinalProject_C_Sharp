@@ -1991,7 +1991,6 @@ a.b-home:hover{
 .login-right input[type="text"] {
 	border: 1px solid #DDDBDB;
 	outline-color:#fb4d01;
-	width: 96%;
 	font-size:0.8125em;
 	padding:10px;
 }
@@ -2212,12 +2211,12 @@ p.cart {
 
 .close1,.close2{
   background: url('../images/close_1.png') no-repeat;
-
   cursor: pointer;
   width: 28px;
   height: 28px;
+  margin-left: 160px;
   position: absolute;
-  width: 25%;
+  width: 55%;
 }
 .cart-header {  
   position: relative;  

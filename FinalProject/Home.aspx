@@ -19,89 +19,71 @@
 </head>
 <body>
     <form id="form1" runat="server">
-<div class="header_top">
-	<div class="container">
-		<div class="one-fifth column row_1">
-			<span class="selection-box"><select class="domains valid" name="domains">
-			   <option>English</option>
-			   <option>French</option>
-			   <option>German</option>
-			</select></span>
-		 </div>
-		 <div class="cssmenu">
-			<ul>
-			   <li class="active"><a href="login.html">My Account</a></li> 
-			</ul>
-		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             <br />
-             &nbsp;<asp:Label ID="lblInfo" runat="server"></asp:Label>
-             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             <asp:HyperLink ID="loginLink" runat="server" NavigateUrl="~/Login.aspx">Log In</asp:HyperLink>
-&nbsp;</div>
-	</div>
-</div>	
- <div class="header_bottom men_border">
-		<div class="container">
-			<div class="col-xs-8 header-bottom-left">
-				<div class="col-xs-2 logo">
-					<h1><a href="Home.aspx"><span>Buy</span>shop</a></h1>
-				</div>
-				<div class="col-xs-6 menu">
-					<ul class="megamenu skyblue">
-					  <li><a class="color1" href="#">Guitar</a><div class="megapanel">
-						<div class="row">
-							<div class="col1">
-								<div class="h_nav">
-								</div>							
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-								</div>												
-							</div>
-						  </div>
-						</div>
-					</li>
-					<li class="grid"><a class="color2" href="#">Other</a>
-					  <div class="megapanel">
-						<div class="row">
-							<div class="col1">
-								<div class="h_nav">
-								</div>							
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-								</div>							
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-								</div>												
-							</div>
-						  </div>
-						</div>
-				</li>
-				<li><a class="color6" href="#">Support</a></li>
-			  </ul> 
-			</div>
-		</div>
-		<div class="col-xs-4 ">
-		   <div class="box_1-cart">
-			 <div class="box_11"><a href="Cart.aspx">
-			  <h4>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)<img src="images/bag.png" alt=""/></h4>
-			  </a></div>
-			  <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-			  <div class="clearfix"> </div>
-			</div>
-			<div class="search">	  
-			     <asp:TextBox ID="txtSearch" CssClass="textbox" value="Search" runat="server"></asp:TextBox>
-                <asp:Button ID="btnSearch"  runat="server" Text="Submit" PostBackUrl="~/Home.aspx" />
-                
-               
-				<div id="response"> </div>
-			 </div>
-		   <div class="clearfix"></div>
-		 </div>
-		<div class="clearfix"></div>
-	 </div>
+        <div class="container">
+            <div class="one-fifth column row_1">
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="Login.aspx">My Account</a></li>
+                    <asp:Label ID="lblInfo" runat="server"></asp:Label>
+                    <asp:HyperLink ID="loginLink" runat="server" NavigateUrl="~/Login.aspx">Log In</asp:HyperLink>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="header_bottom men_border">
+            <div class="container">
+                <div class="col-xs-8 header-bottom-left">
+                    <div class="col-xs-2 logo">
+                        <h1><a href="Home.aspx"><span>Home</span></a></h1>
+                    </div>
+                    <div class="col-xs-6 menu">
+                        <ul class="megamenu skyblue">
+                            <li class="grid"><a class="color2" href="Other.aspx">Phụ kiện</a>
+                                <div class="megapanel">
+                                    <div class="row">
+                                        <div class="col1">
+                                            <div class="h_nav">
+                                            </div>
+                                        </div>
+                                        <div class="col1">
+                                            <div class="h_nav">
+                                            </div>
+                                        </div>
+                                        <div class="col1">
+                                            <div class="h_nav">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="color6" href="ViewOrders.aspx">View Orders</a></li>
+                            <li><a class="color6" href="CheckOut.aspx">Check Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-4 ">
+                    <div class="box_1-cart">
+                        <div class="box_11">
+                            <a href="Cart.aspx">
+                                <h4>Cart: <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)
+                                    <img src="images/bag.png" alt="" /><span class="clearfix"></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="search">
+                        <asp:TextBox ID="txtSearch" CssClass="textbox" value="" runat="server"></asp:TextBox>
+                        <asp:Button ID="btnSearch" runat="server" Text="Submit"  />
+                        <div id="response"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
 		<div class ="sp-content">
 			<div class="container">
                 <% foreach (var item in list) { %>

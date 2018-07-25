@@ -17,7 +17,7 @@ namespace FinalProject
             productDao = new ProductDAO();
             if (!IsPostBack)
             {
-               
+
                 list = productDao.GetList10Product();
                 this.DataBind();
             }
@@ -26,7 +26,7 @@ namespace FinalProject
                 btnSearch_Click(null, null);
                 this.DataBind();
             }
-           
+
             string username = "";
             try
             {
@@ -35,7 +35,7 @@ namespace FinalProject
             }
             catch (NullReferenceException ex)
             {
-
+                Console.WriteLine(ex);
             }
             if (!string.IsNullOrEmpty(lblInfo.Text))
             {

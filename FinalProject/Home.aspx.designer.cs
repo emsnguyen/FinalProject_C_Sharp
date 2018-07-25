@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinalProject {
-    
-    
-    public partial class Home {
-        
+namespace FinalProject
+{
+
+
+    public partial class Home
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// lblInfo control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblInfo;
-        
+
         /// <summary>
         /// loginLink control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink loginLink;
-        
+
         /// <summary>
         /// txtSearch control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSearch;
-        
+
         /// <summary>
         /// btnSearch control.
         /// </summary>

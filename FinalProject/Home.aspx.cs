@@ -62,10 +62,7 @@ namespace FinalProject
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            productDao = new ProductDAO();
-            string search = txtSearch.Text.Trim();
-            list = productDao.getListContainString(search);
-            this.DataBind();
+            
         }
     }
 }

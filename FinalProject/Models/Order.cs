@@ -12,8 +12,8 @@ namespace FinalProject.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
-            Order_Pay = new HashSet<Order_Pay>();
-            OrderDetails = new HashSet<OrderDetail>();
+            Order_Pay = new List<Order_Pay>();
+            OrderDetails = new List<OrderDetail>();
         }
 
         public int ID { get; set; }

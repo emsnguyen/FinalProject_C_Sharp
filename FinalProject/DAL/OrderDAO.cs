@@ -75,5 +75,7 @@ namespace FinalProject.DAL
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        //check exist product in cart
+
     }
 }

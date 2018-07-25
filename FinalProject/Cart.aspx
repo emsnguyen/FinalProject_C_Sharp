@@ -1,12 +1,29 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs"
     MasterPageFile="~/Master.Master"
     Inherits="FinalProject.Cart" %>
-
+<%
+    List<OrderDetail> orders = Session["cart"] as List<OrderDetail>;
+    %>
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="css/cart.css" rel="stylesheet" type="text/css" media="all" />
     <div class="sp-content">
         <div class="container">
-            <div class="sp1">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Image</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                </tr>
+                <%
+                    foreach (OrderDetail o in orders){%>
+                {
+                    
+                }
+               <%} %>
+            </table>
+            <%--<div class="sp1">
                 <div class="container-sp2">
                     <input type="checkbox">
                 </div>
@@ -152,11 +169,14 @@
 
                     <div class="infor-sp1-r">
                         <button>Mua Hàng</button>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     </div>
 
 
                 </div>
-            </div>
+            </div>--%>
 
         </div>
     </div>

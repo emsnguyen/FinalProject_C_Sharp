@@ -8,8 +8,7 @@
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/checkOut.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/Details.css" rel="stylesheet" type="text/css" media="all" />
+    
 
 </head>
 <body>
@@ -69,7 +68,7 @@
                     </div>
                     <div class="search">
                         <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-                        <input type="submit" value="Subscribe" id="submit" name="submit">
+                        <asp:Button ID="submit" runat="server" Text="Subscribe" CommandName="submit"  />
                         <div id="response"></div>
                     </div>
                     <div class="clearfix"></div>

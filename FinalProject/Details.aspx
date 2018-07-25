@@ -8,7 +8,7 @@
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 	<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/singleIndex.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/Details.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 <body>

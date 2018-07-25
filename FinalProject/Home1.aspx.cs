@@ -13,8 +13,8 @@ namespace FinalProject
         public Product test;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+           
+            
                 ProductDAO productDao = new ProductDAO();
                 list = productDao.GetList10Product();
                 this.DataBind();
@@ -33,7 +33,7 @@ namespace FinalProject
                     loginLink.Text = "Log Out";                  
                 }
                 
-            }
+            
         }
        
        

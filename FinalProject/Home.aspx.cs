@@ -11,32 +11,42 @@ namespace FinalProject
     {
         public List<Product> list;
         public Product test;
+        ProductDAO productDao;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            
-                ProductDAO productDao = new ProductDAO();
+            productDao = new ProductDAO();
+            if (!IsPostBack)
+            {
+               
                 list = productDao.GetList10Product();
                 this.DataBind();
-                test = list[0];
-                string username = "";
-                try
-                {
-                    username = Session["username"].ToString();
-                    lblInfo.Text = "Hello " + username + " !";
-                } catch (NullReferenceException ex)
-                {
-                    
-                }
-                if (!string.IsNullOrEmpty(lblInfo.Text))
-                {
-                    loginLink.Text = "Log Out";                  
-                }
-                
-            
+            }
+            else
+            {
+                btnSearch_Click(null, null);
+                this.DataBind();
+            }
+           
+            string username = "";
+            try
+            {
+                username = Session["username"].ToString();
+                lblInfo.Text = "Hello " + username + " !";
+            }
+            catch (NullReferenceException ex)
+            {
+
+            }
+            if (!string.IsNullOrEmpty(lblInfo.Text))
+            {
+                loginLink.Text = "Log Out";
+            }
+
+
+
         }
-       
-       
+
+
 
         void LoadData()
         {
@@ -48,6 +58,14 @@ namespace FinalProject
 
             //HyperLink1.NavigateUrl = "Details.aspx?id";
             Response.Redirect("Details.aspx");
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            productDao = new ProductDAO();
+            string search = txtSearch.Text.Trim();
+            list = productDao.getListContainString(search);
+            this.DataBind();
         }
     }
 }

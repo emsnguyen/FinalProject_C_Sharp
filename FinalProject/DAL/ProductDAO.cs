@@ -96,7 +96,7 @@ namespace FinalProject.DAL
         {
             List<Models.Product> list = new List<Models.Product>();
             con = new SqlConnection(connectionString);
-            string query = @"SELECT [ID] TOP (10)
+            string query = @"SELECT TOP (10) [ID] 
                            ,[Name]
                          ,[DateImported]
                        ,[Description]

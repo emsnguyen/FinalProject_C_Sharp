@@ -19,7 +19,9 @@ namespace FinalProject
             TotalPage = productDao.GetTotalGuitar();
             if (!IsPostBack)
             {
-                list = productDao.GetList10Product();
+
+                list = productDao.GetList10Guitar();
+                this.DataBind();
             }
             else
             {
@@ -52,7 +54,7 @@ namespace FinalProject
         {
             productDao = new ProductDAO();
             string search = txtSearch.Text.Trim();
-            list = productDao.getListContainString(search);
+            list = productDao.getListGuitarContainString(search);
             this.DataBind();
         }
     }

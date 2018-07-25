@@ -19,7 +19,7 @@ namespace FinalProject
             productDao = new ProductDAO();
             TextBox txtSearch = Master.FindControl("txtSearch") as TextBox;
             string search = txtSearch.Text.Trim();
-            list = productDao.getListContainString(search);
+            list = productDao.getListGuitarContainString(search);
             this.DataBind();
 
 

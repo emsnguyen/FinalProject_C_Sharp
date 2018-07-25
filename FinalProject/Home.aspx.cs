@@ -18,7 +18,7 @@ namespace FinalProject
             if (!IsPostBack)
             {
 
-                list = productDao.GetList10Product();
+                list = productDao.GetList10Guitar();
                 this.DataBind();
             }
             else
@@ -62,7 +62,10 @@ namespace FinalProject
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            
+            productDao = new ProductDAO();
+            string search = txtSearch.Text.Trim();
+            list = productDao.getListGuitarContainString(search);
+            this.DataBind();
         }
     }
 }

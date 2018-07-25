@@ -12,21 +12,22 @@ namespace FinalProject.DAL
         //DataSet ds;
 
         // get first 10 items from table Product
-        public List<Models.Product> GetList10Product()
+        public List<Models.Product> GetList10Guitar()
         {
             List<Models.Product> list = new List<Models.Product>();
             con = new SqlConnection(connectionString);
-            string query = @"SELECT TOP (10) [ID]
-                           ,[Name]
-                         ,[DateImported]
-                       ,[Description]
-                      ,[TotalSold]
-                      ,[TotalLeft]
-                         ,[Image]
-                      ,[SubCategoryID]
-                      ,[MakerID]
-                    ,[Price]
-                    FROM [PRN292_Project].[dbo].[Product]";
+            string query = @"SELECT TOP (10) p.ID
+          ,p.Name
+          ,[DateImported]
+          ,[Description]
+          ,[TotalSold]
+        ,[TotalLeft]
+      ,[Image]
+      ,[SubCategoryID]
+      ,[MakerID]
+      ,[Price]
+  FROM Product as p inner join SubCategory as s
+  on p.SubCategoryID = s.ID  where s.CategoryID=1";
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -86,27 +87,28 @@ namespace FinalProject.DAL
                 p.SubCategory.ID = Convert.ToInt32(reader["SubCategoryID"].ToString());
                 p.MakerID = Convert.ToInt32(reader["MakerID"].ToString());
                 p.Price = Convert.ToDouble(reader["Price"].ToString());
-               
+
             }
 
             return p;
         }
         // get list of Product which contains string
-        public List<Models.Product> getListContainString(string contain)
+        public List<Models.Product> getListGuitarContainString(string contain)
         {
             List<Models.Product> list = new List<Models.Product>();
             con = new SqlConnection(connectionString);
-            string query = @"SELECT TOP (10) [ID] 
-                           ,[Name]
-                         ,[DateImported]
-                       ,[Description]
-                      ,[TotalSold]
-                      ,[TotalLeft]
-                         ,[Image]
-                      ,[SubCategoryID]
-                      ,[MakerID]
-                    ,[Price]
-                    FROM [PRN292_Project].[dbo].[Product] where Name like @name";
+            string query = @"SELECT TOP (10) p.ID
+                             ,p.Name
+                              ,[DateImported]
+                             ,[Description]
+                             ,[TotalSold]
+                             ,[TotalLeft]
+                             ,[Image]
+                             ,[SubCategoryID]
+                             ,[MakerID]
+                             ,[Price]
+                            FROM Product as p inner join SubCategory as s
+                         on p.SubCategoryID = s.ID  where s.CategoryID=1 and p.Name like @name";
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@name", "%" + contain + "%");

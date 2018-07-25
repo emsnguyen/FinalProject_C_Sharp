@@ -1,15 +1,15 @@
-﻿using System;
+﻿using FinalProject.DAL;
+using FinalProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FinalProject.Models;
-using FinalProject.DAL;
 
 namespace FinalProject
 {
-    public partial class singleIndex : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         ProductDAO productDao = new ProductDAO();
         public Product product;
@@ -17,6 +17,7 @@ namespace FinalProject
         {
             int id = Convert.ToInt32(Request["productID"]);
             product = productDao.GetProductByID(id);
+
         }
     }
 }

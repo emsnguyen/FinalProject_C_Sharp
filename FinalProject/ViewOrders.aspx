@@ -28,7 +28,8 @@
                     <%= item.Total %>
                 </td>
                 <td>
-                    <%= item.Order_Pay.ElementAt(0).PaymentMethod.PaymentMethod1 %>
+                   <%= item.Order_Pay.ElementAt(0).PaymentMethod.PaymentMethod1 %>
+                  
                 </td>
                 <td>
                     <%= orderID %>

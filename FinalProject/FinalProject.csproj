@@ -142,7 +142,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home.aspx" />
     <Content Include="images\arrow.png" />
     <Content Include="images\bag.png" />
     <Content Include="images\close_1.png" />
@@ -174,13 +173,6 @@
     <Compile Include="DAL\BaseDAO.cs" />
     <Compile Include="DAL\OrderDAO.cs" />
     <Compile Include="DAL\ProductDAO.cs" />
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

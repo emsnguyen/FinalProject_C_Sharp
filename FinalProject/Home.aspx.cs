@@ -17,31 +17,29 @@ namespace FinalProject
             productDao = new ProductDAO();
             if (!IsPostBack)
             {
-               
+
                 list = productDao.GetList10Product();
                 this.DataBind();
-            }
-            else
-            {
-                btnSearch_Click(null, null);
-                this.DataBind();
-            }
-           
-            string username = "";
-            try
-            {
-                username = Session["username"].ToString();
-                lblInfo.Text = "Hello " + username + " !";
-            }
-            catch (NullReferenceException ex)
-            {
 
-            }
-            if (!string.IsNullOrEmpty(lblInfo.Text))
-            {
-                loginLink.Text = "Log Out";
-            }
 
+
+
+
+                string username = "";
+                try
+                {
+                    username = Session["username"].ToString();
+                    lblInfo.Text = "Hello " + username + " !";
+                }
+                catch (NullReferenceException ex)
+                {
+
+                }
+                if (!string.IsNullOrEmpty(lblInfo.Text))
+                {
+                    loginLink.Text = "Log Out";
+                }
+            }
 
 
         }

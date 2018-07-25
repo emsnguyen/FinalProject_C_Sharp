@@ -92,8 +92,8 @@
 			  <div class="clearfix"> </div>
 			</div>
 			<div class="search">	  
-			     <asp:TextBox ID="txtSearch" CssClass="textbox" value="Search" runat="server"></asp:TextBox>
-                <asp:Button ID="btnSearch"  runat="server" Text="Submit" PostBackUrl="~/Home.aspx" />
+			     <asp:TextBox ID="txtSearch" CssClass="textbox" value="" runat="server"></asp:TextBox>
+                <asp:Button ID="btnSearch"  runat="server" Text="Submit" PostBackUrl="~/Home.aspx" OnClick="btnSearch_Click"/>
                 
                
 				<div id="response"> </div>

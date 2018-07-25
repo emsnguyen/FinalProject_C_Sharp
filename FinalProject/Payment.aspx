@@ -14,14 +14,14 @@
         }
 
         .auto-style1 {
-            width: 589px;
+            width: 542px;
             height: 20px;
         }
         .auto-style2 {
             height: 20px;
         }
         .auto-style3 {
-            width: 589px;
+            width: 542px;
             height: 130px;
         }
 
@@ -33,8 +33,12 @@
             height: 130px;
         }
 
+        .auto-style6 {
+            width: 509px;
+        }
+
     </style>
-    <div style="margin-bottom: 0px">
+    <div style="margin-bottom: 0px; max-width: 1200px; margin: 10px auto; box-shadow: 0px 0px 12px rgba(0,0,0,0.3); padding: 50px 10px; border-radius: 11px;">
         <table id="payment" class="size_3" style="padding-left: 20px">
             <tr>
                 <td class="auto-style3" style="border-bottom: 1px dotted black;">
@@ -64,12 +68,12 @@
                 <td class="auto-style1">
                     <asp:Label ID="Label2" runat="server" Text="2. Choose Payment Method" Font-Bold="True" Font-Size="Medium"></asp:Label>
                     <br />
-                    <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                        <asp:ListItem Value="1">COD - Cash On Delivery</asp:ListItem>
-                        <asp:ListItem Value="2">VISA, Mastercard</asp:ListItem>
-                    </asp:RadioButtonList>
+                            <asp:RadioButton ID="RadioButton2" runat="server" GroupName="method" OnCheckedChanged="RadioButton2_CheckedChanged" Text="COD - Cash On Delivery" AutoPostBack="True" Checked="True"  />
                     <br />
-                    <div style="width: 509px; border: 1px solid black;" id="creditCardBox">
+                    <asp:RadioButton ID="RadioButton3" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" GroupName="method" Text="VISA, Mastercard" AutoPostBack="True" />
+                    <br />
+                    <br />
+                    <div style="border: 1px dotted grey; border-radius: 11px; line-height: 30px;padding: 20px; box-sizing: border-box;" id="CardBox" runat="server" class="auto-style6">
                         <asp:Label ID="Label3" runat="server" Text="VISA, Mastercard Information" Font-Bold="True"></asp:Label>
                         <br />
                         <asp:Label ID="Label4" runat="server" Text="Card number:"></asp:Label>
@@ -95,12 +99,22 @@
                     <asp:Button ID="Button3" runat="server" Text="Edit" Width="100px" />
                     <br />
                     -----------------------------------------------------------------<br />
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" EnableModelValidation="True" Width="283px">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="359px">
                         <Columns>
-                            <asp:BoundField DataField="productName" HeaderText="Product" />
-                            <asp:BoundField DataField="quantity" HeaderText="Quantity" />
-                            <asp:BoundField DataField="price" HeaderText="Price" />
+                            <asp:BoundField DataField="productID" HeaderText="ID" >
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="50px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="productName" HeaderText="Product" >
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="quantity" HeaderText="Quantity" >
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="price" HeaderText="Price">
+                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            </asp:BoundField>
                         </Columns>
+                        <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                     </asp:GridView>
                     -----------------------------------------------------------------<br />
                     <asp:Label ID="Label10" runat="server" Text="Subtotal (x items):"></asp:Label>
@@ -125,9 +139,9 @@
                 <td colspan="2" class="auto-style4">
 &nbsp;&nbsp;&nbsp;
                     <br />
-                    <asp:Button ID="Button1" runat="server" Text="Place Order" Font-Bold="True" Font-Size="Large" Width="200px" />
+                    <asp:Button ID="Button1" runat="server" Text="Place Order" Font-Bold="True" Font-Size="Large" Width="200px" OnClick="Button1_Click" />
 &nbsp;&nbsp;
-                    <asp:Button ID="Button2" runat="server" Text="Cancel Order" Font-Bold="True" Font-Size="Large" Width="200px" />
+                    <asp:Button ID="Button2" runat="server" Text="Cancel Order" Font-Bold="True" Font-Size="Large" Width="200px" OnClick="Button2_Click" />
                     <br />
                 </td>
             </tr>

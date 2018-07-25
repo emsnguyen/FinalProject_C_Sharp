@@ -9,8 +9,6 @@
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -19,10 +17,8 @@
             </div>
             <div class="cssmenu">
                 <ul>
-                    <li class="active"><a href="Login.aspx">My Account</a></li>
                     <asp:Label ID="lblInfo" runat="server"></asp:Label>
                     <asp:HyperLink ID="loginLink" runat="server" NavigateUrl="~/Login.aspx">Log In</asp:HyperLink>
-
                 </ul>
 
             </div>
@@ -67,7 +63,6 @@
                                 </h4>
                             </a>
                         </div>
-                        <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
                         <div class="clearfix"></div>
                     </div>
                     <div class="search">

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
 using FinalProject.Models;
 using FinalProject.DAL;
 namespace FinalProject
@@ -12,19 +9,21 @@ namespace FinalProject
         public List<Product> list;
         public Product test;
         ProductDAO productDao;
+        public int CurrentPage { get; set; }
+        public int PageGap { get; set; } = 4;
+        public int TotalPage { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             productDao = new ProductDAO();
+            CurrentPage = Convert.ToInt32(Request["page"]);
+            TotalPage = productDao.GetTotalGuitar();
             if (!IsPostBack)
             {
-
                 list = productDao.GetList10Product();
-                this.DataBind();
             }
             else
             {
                 btnSearch_Click(null, null);
-                this.DataBind();
             }
 
             string username = "";
@@ -41,18 +40,7 @@ namespace FinalProject
             {
                 loginLink.Text = "Log Out";
             }
-
-
-
         }
-
-
-
-        void LoadData()
-        {
-
-        }
-
         protected void btnDetail_Click(object sender, EventArgs e)
         {
 

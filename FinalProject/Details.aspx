@@ -129,7 +129,8 @@
 							</div>
 							<div class="infor-sp1-r" style="margin-left: 0px">
 								<br>
-							<button  style="background: #ff0033" type="">MUA NGAY</button>
+                                
+							
 							<button style="background: #794044">THÊM VÀO GIỎ HÀNG</button>
 							</div>
 							<div class="clear"></div>

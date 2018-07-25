@@ -46,5 +46,32 @@ namespace FinalProject.DAL
                 }
             }
         }
+        public void insertOrder(Order order)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            string query = @"insert into [Order] values(@userid,@orderdate,@deliverdate,@duedate,@total)";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@userid", order.UserID);
+            cmd.Parameters.AddWithValue("@orderdate", order.OrderDate);
+            cmd.Parameters.AddWithValue("@deliverdate", order.DeliveredDate);
+            cmd.Parameters.AddWithValue("@duedate", order.DueDate);
+            cmd.Parameters.AddWithValue("@total", order.Total);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void inserOrderDetail(OrderDetail orderDetail)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            string query = @"insert into OrderDetail values(@orderid,@productid,@quantity,@total)";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@orderid", orderDetail.OrderID);
+            cmd.Parameters.AddWithValue("@productid", orderDetail.ProductID);
+            cmd.Parameters.AddWithValue("@quantity", orderDetail.Quantity);
+            cmd.Parameters.AddWithValue("@total", orderDetail.Total);
+
+        }
     }
 }

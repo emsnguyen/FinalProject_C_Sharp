@@ -19,7 +19,11 @@
             <div class="cssmenu">
                 <ul>
                     <li class="active"><a href="Login.aspx">My Account</a></li>
+                     <asp:Label ID="lblInfo" runat="server"></asp:Label>
+             <asp:HyperLink ID="loginLink" runat="server" NavigateUrl="~/Login.aspx">Log In</asp:HyperLink>
+
                 </ul>
+               
             </div>
         </div>
         <div class="header_bottom men_border">

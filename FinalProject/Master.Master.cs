@@ -11,7 +11,20 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string username = "";
+            try
+            {
+                username = Session["username"].ToString();
+                lblInfo.Text = "Hello " + username + " !";
+            }
+            catch (NullReferenceException ex)
+            {
 
+            }
+            if (!string.IsNullOrEmpty(lblInfo.Text))
+            {
+                loginLink.Text = "Log Out";
+            }
         }
     }
 }

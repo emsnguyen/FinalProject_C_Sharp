@@ -46,6 +46,7 @@ namespace FinalProject.DAL
                 }
             }
         }
+
         public void insertOrder(Order order)
         {
             SqlConnection con = new SqlConnection(connectionString);
@@ -71,7 +72,8 @@ namespace FinalProject.DAL
             cmd.Parameters.AddWithValue("@productid", orderDetail.ProductID);
             cmd.Parameters.AddWithValue("@quantity", orderDetail.Quantity);
             cmd.Parameters.AddWithValue("@total", orderDetail.Total);
-
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

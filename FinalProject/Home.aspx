@@ -48,7 +48,7 @@
 				</div>
 				<div class="col-xs-6 menu">
 					<ul class="megamenu skyblue">
-					  <li><a class="color1" href="guitar.aspx">Guitar</a><div class="megapanel">
+					  <li><a class="color1" href="#">Guitar</a><div class="megapanel">
 						<div class="row">
 							<div class="col1">
 								<div class="h_nav">
@@ -79,7 +79,7 @@
 						  </div>
 						</div>
 				</li>
-				<li><a class="color6" href="contact.html">Support</a></li>
+				<li><a class="color6" href="#">Support</a></li>
 			  </ul> 
 			</div>
 		</div>
@@ -92,8 +92,10 @@
 			  <div class="clearfix"> </div>
 			</div>
 			<div class="search">	  
-				<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-				<input type="submit" value="Subscribe" id="submit" name="submit">
+			     <asp:TextBox ID="txtSearch" CssClass="textbox" value="Search" runat="server"></asp:TextBox>
+                <asp:Button ID="btnSearch"  runat="server" Text="Submit" PostBackUrl="~/Home.aspx" />
+                
+               
 				<div id="response"> </div>
 			 </div>
 		   <div class="clearfix"></div>

@@ -12,6 +12,7 @@ namespace FinalProject
     public partial class Cart : System.Web.UI.Page
     {
         ProductDAO ProductDAO = new ProductDAO();
+        public List<OrderDetail> orders;
 
         public bool IsExistProduct(List<OrderDetail> orders, int productID)
         {
@@ -31,12 +32,13 @@ namespace FinalProject
         {
             int productID = Convert.ToInt32(Request["productID"]);
             int quantity = Convert.ToInt32(Request["quantity"]);
+            
 
             if (Session["cart"] == null)
             {
                 Session["cart"] = new List<OrderDetail>();
             }
-            List<OrderDetail> orders = Session["cart"] as List<OrderDetail>;
+            orders = Session["cart"] as List<OrderDetail>;
             if (!IsExistProduct(orders, productID))
             {
                 Product product = ProductDAO.GetProductByID(productID);
@@ -54,6 +56,11 @@ namespace FinalProject
                 }
                 
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CheckOut.aspx");
         }
     }
 }

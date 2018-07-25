@@ -12,7 +12,9 @@ namespace FinalProject
     public partial class singleIndex : System.Web.UI.Page
     {
         ProductDAO productDao = new ProductDAO();
+
         public Product product;
+       
         int id = 0;
         public bool IsExistProduct(List<OrderDetail> orders, int productID)
         {
@@ -30,6 +32,7 @@ namespace FinalProject
             
                 id = Convert.ToInt32(Request["productID"]);
                 product = productDao.GetProductByID(id);
+                
 
             //try
             //{

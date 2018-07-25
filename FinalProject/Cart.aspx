@@ -1,28 +1,34 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs"
     MasterPageFile="~/Master.Master"
     Inherits="FinalProject.Cart" %>
-<%
-    List<OrderDetail> orders = Session["cart"] as List<OrderDetail>;
-    %>
+ 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="css/cart.css" rel="stylesheet" type="text/css" media="all" />
     <div class="sp-content">
         <div class="container">
-            <table>
+            <%double TotalPrice = 0; %>
+            <table border="1" class="table-condensed" style="text-align:center">
                 <tr>
-                    <th>Product</th>
-                    <th>Image</th>
-                    <th>Unit Price</th>
-                    <th>Quantity</th>
-                    <th>Total Price</th>
+                    <th style="height: 21px">Product Name</th>
+                    <th style="height: 21px">Image</th>
+                    <th style="height: 21px">Unit Price</th>
+                    <th style="height: 21px">Quantity</th>
+                    <th style="height: 21px">Total Price</th>
                 </tr>
-                <%
-                    foreach (OrderDetail o in orders){%>
-                {
-                    
-                }
-               <%} %>
+                <%foreach (var item in orders)
+                    {
+                        TotalPrice += Convert.ToDouble(item.Product.Price * item.Quantity);%>
+                    <tr>
+                        <td><%= item.Product.Name %></td>
+                        <td><img width="200px" height="200px" src="<%= item.Product.Image %>"</td>
+                        <td><%= item.Product.Price %> VND</td>
+                        <td><%= item.Quantity %></td>
+                        <td><%= item.Product.Price * item.Quantity %> VND</td>
+                    </tr>
+                <%} %>
             </table>
+            <p style="color:red"><b>Total : <%= TotalPrice%> VND</b></p>
+            <asp:Button ID="Button1" runat="server" Text="Confirm Order" BackColor="Lime" CssClass="btn active" OnClick="Button1_Click" />
             <%--<div class="sp1">
                 <div class="container-sp2">
                     <input type="checkbox">

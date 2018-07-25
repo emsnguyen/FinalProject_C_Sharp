@@ -20,6 +20,7 @@
                 <% int orderID = item.Order_Pay.ElementAt(0).OrderID; %>
                 <td>
                     <%= orderID %>
+                    <input type="hidden" value="<%= orderID %>"/>
                 </td>
                 <td>
                     <%= item.UserID %>
@@ -31,8 +32,7 @@
                     <%= item.Order_Pay.ElementAt(0).PaymentMethod.PaymentMethod1 %>
                 </td>
                 <td>
-                    <%= orderID %>
-                    <asp:CheckBox ID="abc" runat="server" Checked="true" />
+                    <%= item.Order_Pay.ElementAt(0).PaymentStatus %>
                 </td>
             </tr>
             <%} %>

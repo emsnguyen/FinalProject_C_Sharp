@@ -6,7 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using FinalProject.Models;
 using FinalProject.DAL;
-using FinalProject.Models;
 
 namespace FinalProject
 {
@@ -15,7 +14,7 @@ namespace FinalProject
         ProductDAO productDao = new ProductDAO();
         public Product product;
         protected void Page_Load(object sender, EventArgs e)
-        {           
+        {
             int id = Convert.ToInt32(Request["productID"]);
             product = productDao.GetProductByID(id);
         }

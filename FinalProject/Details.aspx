@@ -1,12 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="FinalProject.WebForm2" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <link href="css/Details.css" rel="stylesheet" type="text/css" media="all" />
-   
+    <link href="css/Details.css" rel="stylesheet" type="text/css" media="all" />
+
     <div class="sp-content">
         <div class="container">
             <div class="sp1">
                 <div class="container-sp2">
-                    <div class="main-img">
+                    <div class="img-sp1">
                         <img src="<%=product.Image%>" alt="#">
                     </div>
                 </div>
@@ -14,7 +15,8 @@
             <div class="sp1">
                 <div class="container-sp2">
                     <div class="img-sp1">
-                        <p><%=product.Name %>
+                        <p>
+                            <%=product.Name %>
                             <!-- Dien ten san pham thay cho nay -->
                         </p>
                     </div>

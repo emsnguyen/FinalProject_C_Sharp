@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
+	<form id="form1" runat="server">
 <div class="header_top">
 	<div class="container">
 		<div class="one-fifth column row_1">
@@ -68,7 +68,6 @@
 						  </div>
 						</div>
 				</li>
-				<li><a class="color6" href="contact.html">Support</a></li>
 			  </ul> 
 			</div>
 		</div>
@@ -124,20 +123,20 @@
 							<p><span style="font-weight: lighter; font-size: 13px;">Phí chuyển tới: </span></p>
 
 							<div class="input-quality">
-                                <%--<button class="button-outline">-</button>--%>
-                                <asp:Button ID="Button2" runat="server" Text="-" OnClick="Button2_Click" />
+								<%--<button class="button-outline">-</button>--%>
+								<asp:Button ID="Button2" runat="server" Text="-" OnClick="Button2_Click" />
 								<asp:TextBox ID="txtQuantity" style="text-align:center" runat="server" Width="27px" Enabled="False" >1</asp:TextBox>
-                                <asp:Button ID="Button3" runat="server" Text="+" OnClick="Button3_Click" />
-                                
-                                
+								<asp:Button ID="Button3" runat="server" Text="+" OnClick="Button3_Click" />
+								
+								
 								<%--<button class="button-outline">+</button>--%>
-							    <br />
-                                <br />
-                                <br />
+								<br />
+								<br />
+								<br />
 							</div>
 							<div class="infor-sp1-r" style="margin-left: 0px">
 								<br>
-                                
+								
 							<a style="color:red" href="Cart.aspx?productID=<%= product.ID %>&quantity=<%= txtQuantity.Text %>">Thêm vào giỏ hàng</a>
 							<%--<button style="background: #794044">THÊM VÀO GIỎ HÀNG</button>--%>
 							</div>
@@ -203,6 +202,6 @@
 		</div>
 	</div>
 </div>
-    </form>
+	</form>
 </body>
 </html>

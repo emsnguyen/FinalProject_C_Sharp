@@ -85,6 +85,10 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="LimitedAccess.aspx" />
+    <Content Include="SearchProduct.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Details.aspx" />
     <None Include="packages.config" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\cart.css" />
@@ -183,6 +187,21 @@
     <Compile Include="DAL\BaseDAO.cs" />
     <Compile Include="DAL\OrderDAO.cs" />
     <Compile Include="DAL\ProductDAO.cs" />
+    <Compile Include="DAL\UserDAO.cs" />
+    <Compile Include="LimitedAccess.aspx.cs">
+      <DependentUpon>LimitedAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LimitedAccess.aspx.designer.cs">
+      <DependentUpon>LimitedAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProduct.aspx.cs">
+      <DependentUpon>SearchProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchProduct.aspx.designer.cs">
+      <DependentUpon>SearchProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

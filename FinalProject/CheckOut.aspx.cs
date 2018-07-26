@@ -16,11 +16,17 @@ namespace FinalProject
         {
             _loadData();
             double total = 0;
-            foreach(OrderDetail item in items)
+            if (items != null)
             {
-                total += item.Total;
+                foreach (OrderDetail item in items)
+                {
+                    total += item.Total;
+                }
+                totalLabel.Text = Convert.ToString(total) + " VND";
+            } else
+            {
+                totalLabel.Text = "0 VND";
             }
-            totalLabel.Text = Convert.ToString(total);
         }
 
         private void _loadData()

@@ -138,7 +138,7 @@
 							<div class="infor-sp1-r" style="margin-left: 0px">
 								<br>
                                 
-							<a href="Cart.aspx?productID=<%= product.ID %>&quantity=<%= txtQuantity.Text %>">Thêm vào giỏ hàng</a>
+							<a style="color:red" href="Cart.aspx?productID=<%= product.ID %>&quantity=<%= txtQuantity.Text %>">Thêm vào giỏ hàng</a>
 							<%--<button style="background: #794044">THÊM VÀO GIỎ HÀNG</button>--%>
 							</div>
 							<div class="clear"></div>

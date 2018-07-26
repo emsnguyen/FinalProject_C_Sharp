@@ -6,7 +6,7 @@
     <link href="css/cart.css" rel="stylesheet" type="text/css" media="all" />
     <div class="sp-content">
         <div class="container">
-            <%double TotalPrice = 0; %>
+            <%double TotalPrice = 0; int count = 0;%>
             <table border="1" class="table-condensed" style="text-align:center">
                 <tr>
                     <th style="height: 21px">Product Name</th>
@@ -17,7 +17,8 @@
                 </tr>
                 <%foreach (var item in orders)
                     {
-                        TotalPrice += Convert.ToDouble(item.Product.Price * item.Quantity);%>
+                        TotalPrice += Convert.ToDouble(item.Product.Price * item.Quantity);
+                        count += item.Quantity;%>
                     <tr>
                         <td><%= item.Product.Name %></td>
                         <td><img width="200px" height="200px" src="<%= item.Product.Image %>"</td>
@@ -28,6 +29,12 @@
                 <%} %>
             </table>
             <p style="color:red"><b>Total : <%= TotalPrice%> VND</b></p>
+            <p style="color:red"><b>Total Items : <%= count%></b></p>
+            <% if (count == 0)
+                {
+                    disableButton();
+                    
+                }%>
             <asp:Button ID="Button1" runat="server" Text="Confirm Order" BackColor="Lime" CssClass="btn active" OnClick="Button1_Click" />
             <%--<div class="sp1">
                 <div class="container-sp2">
@@ -183,6 +190,10 @@
 
                 </div>
             </div>--%>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" BackColor="Aqua" CssClass="btn active" OnClick="Button2_Click" Text="Continue Shopping" />
+&nbsp;&nbsp;&nbsp;
 
         </div>
     </div>

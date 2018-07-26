@@ -72,9 +72,19 @@ namespace FinalProject
             }
         }
 
+        public void disableButton()
+        {
+            Button1.Enabled = false;
+        }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("CheckOut.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
         }
     }
 }

@@ -45,11 +45,10 @@
 						<ul class="megamenu skyblue">
 							<li class="grid"><a class="color2" href="Other.aspx">Phụ kiện</a></li>
 							<li>
-								<asp:Label ID="lblInfo" runat="server"></asp:Label>
 								<% if (Session["userID"] == null)
 									{ %>
 								<asp:HyperLink ID="LoginLink" 
-									CssClass="color1"
+									CssClass="color2"
 									runat="server" NavigateUrl="~/Login.aspx">Đăng nhập</asp:HyperLink>
 								<%}
 								else

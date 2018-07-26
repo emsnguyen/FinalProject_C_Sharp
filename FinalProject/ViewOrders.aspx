@@ -3,7 +3,10 @@
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="css/ViewOrders.css" rel="stylesheet" />
-    <asp:GridView ID="gvOrders" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1">
+    <h3>List of orders</h3>
+    <asp:GridView ID="gvOrders" runat="server" 
+        CssClass="gvOrders"
+        AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1">
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
             <asp:BoundField DataField="OrderID" HeaderText="OrderID" SortExpression="OrderID" />

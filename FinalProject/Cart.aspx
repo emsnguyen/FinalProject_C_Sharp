@@ -37,7 +37,7 @@
                     %>
                     <td><%= unitPrice %> VND</td>
                     <td><%= item.Quantity %></td>
-                    <% double total = (double) item.Product.Price * item.Quantity;
+                    <% double total = Convert.ToDouble(item.Product.Price * item.Quantity);
                         string sTotal = String.Format("{0:n}", total);
                         %>
                     <td><%= sTotal %> VND</td>

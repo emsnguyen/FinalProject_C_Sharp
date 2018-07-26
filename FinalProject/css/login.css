@@ -160,9 +160,10 @@ body a{
 	 font-weight: 800;
 	 margin: 5px 0 0 0;
 }
-.logo h1 a span{
-	color:#f54d56;
-}
+    .logo h1 a span {
+        color: #f54d56;
+        font-family: "Times New Roman";
+    }
 .logo h1 a{
 	color:#333;
 }

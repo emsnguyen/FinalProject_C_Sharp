@@ -22,14 +22,18 @@
 						<ul class="megamenu skyblue">
 							<li class="grid"><a class="color2" href="Other.aspx">Phụ kiện</a></li>
 							<li>
-								<asp:Label ID="lblInfo" runat="server"></asp:Label>
 								<% if (Session["userID"] == null)
 									{ %>
-								<asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">Đăng nhập</asp:HyperLink>
+								<asp:HyperLink ID="LoginLink" 
+									CssClass="color2"
+									runat="server" NavigateUrl="~/Login.aspx">Đăng nhập</asp:HyperLink>
 								<%}
 								else
 								{%>
-								<asp:LinkButton ID="linkLogout" runat="server" OnClick="linkLogout_Click">Đăng xuất</asp:LinkButton>
+								<asp:LinkButton ID="linkLogout" 
+									CssClass="color1"
+									runat="server" OnClick="linkLogout_Click"
+									>Đăng xuất</asp:LinkButton>
 								<%} %>
 
 							</li>

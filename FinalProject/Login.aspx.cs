@@ -1,26 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using FinalProject.DAL;
 using FinalProject.Models;
 
 namespace FinalProject
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-        public SqlConnection connection;
-       
-        public SqlConnection connectDB()
-        {
-            string cntStr = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-            connection = new SqlConnection(cntStr);
-            connection.Open();
-            return connection;
-        }
         public void MsgBox(String ex, Page pg, Object obj)
         {
             string s = "<SCRIPT language='javascript'>alert('" + ex.Replace("\r\n", "\\n").Replace("'", "") + "'); </SCRIPT>";
@@ -28,47 +16,29 @@ namespace FinalProject
             ClientScriptManager cs = pg.ClientScript;
             cs.RegisterClientScriptBlock(cstype, s, s.ToString());
         }
-        public User IsExist(string username, string password)
-        {
-            User u = new User();
-            connection = connectDB();
-            string query = "Select * From [User] Where Username = @username " +
-                " And Password = @password";
-            SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                u.ID = Convert.ToInt32(dr[0].ToString());
-                u.IsAdmin = Convert.ToBoolean(dr[3]);
-                u.UserName = dr[1].ToString();
-                return u;
-            }
-            return null;
-        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             string Username = txtUsername.Text;
             string Password = txtPassword.Text;
-            if (IsExist(Username, Password) != null)
+            User u = new UserDAO().IsExist(Username, Password);
+            if (u != null)
             {
-                Session["userId"] = IsExist(Username, Password).ID;
-                Session["isAdmin"] = IsExist(Username, Password).IsAdmin;
-                Session["username"] = IsExist(Username, Password).UserName;
-                if (IsExist(Username, Password).IsAdmin)
+                Session["userId"] = u.ID;
+                Session["isAdmin"] = u.IsAdmin;
+                Session["username"] = u.UserName;
+                if (u.IsAdmin)
                 {
                     Response.Redirect("ViewOrders.aspx");
                     return;
                 }
                 Response.Redirect("Home.aspx");
-            } else
+            }
+            else
             {
                 lblMessage.Text = "Incorrect username or password!";
             }

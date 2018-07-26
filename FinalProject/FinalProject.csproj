@@ -154,7 +154,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home.aspx" />
     <Content Include="images\arrow.png" />
     <Content Include="images\bag.png" />
     <Content Include="images\close_1.png" />
@@ -164,6 +163,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="Transaction.aspx" />
+
     <Content Include="ViewOrders.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -190,6 +190,9 @@
     <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="LimitedAccess.aspx.cs">
       <DependentUpon>LimitedAccess.aspx</DependentUpon>
+    <Compile Include="DAL\UserDAO.cs" />
+    <Compile Include="LimitedAccess.aspx.cs">
+      <DependentUpon>LimitedAccess.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LimitedAccess.aspx.designer.cs">
@@ -206,8 +209,15 @@
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="LimitedAccess.aspx.designer.cs">
+      <DependentUpon>LimitedAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProduct.aspx.cs">
+      <DependentUpon>SearchProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchProduct.aspx.designer.cs">
+      <DependentUpon>SearchProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
@@ -218,7 +228,6 @@
     </Compile>
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\GuitarEntities.cs" />
     <Compile Include="Models\Maker.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
@@ -291,6 +300,20 @@
     </Compile>
     <Compile Include="Transaction.aspx.designer.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

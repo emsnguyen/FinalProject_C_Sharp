@@ -3,27 +3,31 @@ using FinalProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace FinalProject
 {
     public partial class ViewOrders : System.Web.UI.Page
     {
-        public List<Order> orders;
+        //public Dictionary<int, bool> orderPayment = new Dictionary<int, bool>();
         string connectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadOrders();
-            DataBind();
+            if (Session["isAdmin"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
+            else
+            {
+                bool isAdmin = (bool)Session["isAdmin"];
+                if (!isAdmin)
+                {
+                    Response.Redirect("~/LimitedAccess.aspx");
+                }
+            }
         }
         void LoadOrders()
         {
-            orders = new OrderDAO().GetAll();
+
         }
         void FilterByDate()
         {
@@ -37,9 +41,10 @@ namespace FinalProject
         {
 
         }
-        protected void gvOrders_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            //update payment status in database
         }
     }
 }

@@ -53,7 +53,7 @@ namespace FinalProject
                 }
                 else
                 {
-                   /* foreach (OrderDetail o in orders)
+                   foreach (OrderDetail o in orders)
                     {
                         if (o.Product.ID == productID)
                         {
@@ -61,7 +61,7 @@ namespace FinalProject
                             o.Total = (double)o.Product.Price * o.Quantity;
                         }
                     }
-                    Session["cart"] = orders;*/
+                    Session["cart"] = orders;
                 }
             } else
             {
@@ -79,6 +79,7 @@ namespace FinalProject
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             Response.Redirect("CheckOut.aspx");
         }
 

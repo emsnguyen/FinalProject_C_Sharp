@@ -48,7 +48,7 @@
             </table>
             <% string totalPrice = TotalPrice.ToString("N"); %>
             <p style="color: red"><b>Total : <%= totalPrice %> VND</b></p>
-            <asp:Button ID="Button1" runat="server" Text="Confirm Order" BackColor="Lime" CssClass="btn active" OnClick="Button1_Click" />
+            <asp:Button ID="Button1" runat="server" Text="Confirm Order" BackColor="Lime" CssClass="btn active" OnClick="Button1_Click" PostBackUrl="~/Cart.aspx" />
         </div>
     </div>
 </asp:Content>

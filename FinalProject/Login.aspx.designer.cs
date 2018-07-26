@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinalProject {
-    
-    
-    public partial class WebForm3 {
-        
+namespace FinalProject
+{
+
+
+    public partial class WebForm3
+    {
+
         /// <summary>
         /// txtUsername control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
-        
+
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
-        
+
         /// <summary>
         /// Button1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
+
         /// <summary>
         /// lblMessage control.
         /// </summary>

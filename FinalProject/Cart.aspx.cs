@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using FinalProject.Models;
 using FinalProject.DAL;
 
@@ -13,7 +9,6 @@ namespace FinalProject
     {
         ProductDAO ProductDAO = new ProductDAO();
         public List<OrderDetail> orders;
-
         public bool IsExistProduct(List<OrderDetail> orders, int productID)
         {
             foreach (OrderDetail order in orders)
@@ -26,7 +21,6 @@ namespace FinalProject
             return false;
         }
         //edit quantity
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -47,7 +41,6 @@ namespace FinalProject
                     Product = product,
                     Quantity = quantity
                 };
-
                 orders.Add(od);
                 Session["cart"] = orders;
                 foreach (OrderDetail o in orders)

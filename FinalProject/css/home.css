@@ -1,52 +1,73 @@
-.sp-content{
-	margin-top: 40px;
+.sp-content {
+    margin-top: 40px;
 }
-.sp1{
-    overflow:auto;
-	margin: 15px;
-	border: 1px solid;
-	float: left;
-	width: 45%;
-	min-height: 420px;
+
+.sp1 {
+    overflow: auto;
+    margin: 15px;
+    border: 1px solid;
+    float: left;
+    width: 45%;
+    min-height: 420px;
     margin-bottom: 40px;
 }
+
 .container-sp2 {
     overflow: auto;
     margin-left: 50px;
     min-width: 400px;
     min-height: 430px;
 }
-.container-sp2 table td tr{
- 	font-size: 13px;
- 	font-weight: bold;
+
+    .container-sp2 table td tr {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+.img-sp1 img {
+    width: 400px;
+    height: 300px;
 }
-.img-sp1 img{
-	width: 400px;
-	height: 300px;
-} 
-.img-sp1 p{
-	font-size: 16px;
-	font-weight: bold;
+
+.img-sp1 p {
+    font-size: 16px;
+    font-weight: bold;
 }
-.infor-sp1-I{
-	float: left;
+
+.infor-sp1-I {
+    float: left;
 }
-.infor-sp1-r{
-	float: left;
-	margin-left: 80px;
+
+.infor-sp1-r {
+    float: left;
+    margin-left: 80px;
 }
-.infor-sp1-r p{
-	font-size: 17px;
-	color: red;
-	font-weight: bold;
-}
-.infor-sp1-r button{
-	width: 120px;
-	height: 40px;
-	color:white;
-	font-size: 14px;
-	font-weight:bold;
-	background: #00FF00;
-	border-radius: 10px 10px 10px 10px;
-	float: right;
-}
+
+    .infor-sp1-r a {
+        font: bold 15px Arial;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #333333;
+        border-bottom: 1px solid #333333;
+        border-left: 1px solid #CCCCCC;
+    }
+
+    .infor-sp1-r p {
+        font-size: 17px;
+        color: red;
+        font-weight: bold;
+    }
+
+    .infor-sp1-r button {
+        width: 120px;
+        height: 40px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        background: #00FF00;
+        border-radius: 10px 10px 10px 10px;
+        float: right;
+    }

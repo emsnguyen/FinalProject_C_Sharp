@@ -4,7 +4,6 @@
 .sp1{
 	margin: 15px;
 	float: left;
-	width: 30%;
 	height: 410px;
 }
 .container-sp2{
@@ -16,9 +15,20 @@
 	font-size: 13px;
 	font-weight: bold;
 }
-.img-sp1 img{
-	height: 340px;
-	width: 250px;	
+.link-as-button {
+	font: bold 15px Arial;
+	text-decoration: none;
+	background-color: #EEEEEE;
+	color: #333333;
+	padding: 2px 6px 2px 6px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #CCCCCC;
+}
+.img-sp1 img {
+	height: 100%;
+	width: 100%;
 } 
 .img-sp1 p{
 	font-size: 16px;
@@ -26,10 +36,6 @@
 }
 .infor-sp1-I{
 	float: left;
-}
-.infor-sp1-r{
-	float: left;
-	margin-left: 80px;
 }
 .infor-sp1-r p{
 	font-size: 17px;
@@ -40,8 +46,8 @@
 	width: 120px;
 	height: 40px;
 	color:white;
-	font-size: 14px;
-	font-size: bold;
+	font-size: 18px;
+	font-weight: bold;
 	background: #00FF00;
 	border-radius: 10px 10px 10px 10px;
 	float: right;

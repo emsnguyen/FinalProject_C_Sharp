@@ -31,11 +31,14 @@ namespace FinalProject
             t.Columns.Add("quantity", typeof(int));
             t.Columns.Add("total", typeof(double));
             items = (List<OrderDetail>)Session["cart"];
-            if (items.Count != 0)
+            if (items != null)
             {
-                foreach (OrderDetail item in items)
+                if (items.Count != 0)
                 {
-                    t.Rows.Add(item.Product.ID, item.Product.Name, item.Quantity, item.Total);
+                    foreach (OrderDetail item in items)
+                    {
+                        t.Rows.Add(item.Product.ID, item.Product.Name, item.Quantity, item.Total);
+                    }
                 }
             }
             GridView1.DataSource = t;

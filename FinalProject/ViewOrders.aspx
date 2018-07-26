@@ -6,7 +6,7 @@
     <h3>List of orders</h3>
     <asp:GridView ID="gvOrders" runat="server" 
         CssClass="gvOrders"
-        AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1">
+        AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
             <asp:BoundField DataField="OrderID" HeaderText="OrderID" SortExpression="OrderID" />

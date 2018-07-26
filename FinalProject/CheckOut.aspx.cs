@@ -22,8 +22,9 @@ namespace FinalProject
                 {
                     total += item.Total;
                 }
-                totalLabel.Text = Convert.ToString(total) + " VND";
-            } else
+                totalLabel.Text = String.Format("{0:N}", total) + " VND";
+            }
+            else
             {
                 totalLabel.Text = "0 VND";
             }
@@ -55,9 +56,9 @@ namespace FinalProject
         {
             int productId = Convert.ToInt32(GridView1.Rows[e.RowIndex].Cells[1].Text);
             int index = 0;
-            foreach(OrderDetail item in items)
+            foreach (OrderDetail item in items)
             {
-                if(item.Product.ID == productId)
+                if (item.Product.ID == productId)
                 {
                     break;
                 }
@@ -70,10 +71,11 @@ namespace FinalProject
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if(items.Count == 0)
+            if (items.Count == 0)
             {
                 Button1.Enabled = false;
-            } else
+            }
+            else
             {
                 Response.Redirect("OrderInformation.aspx");
             }

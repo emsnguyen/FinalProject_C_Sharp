@@ -9,7 +9,7 @@
 }
 
     .megamenu li {
-        display: inline
+        display: inline;
     }
 
     .megamenu > li > a {
@@ -262,9 +262,6 @@
         border-bottom: 3px solid #fff;
         z-index: 1
     }
-
-.skyblue, .skyblue > li.showhide {
-}
 
 .megamenu > li.active > a {
     color: #000;

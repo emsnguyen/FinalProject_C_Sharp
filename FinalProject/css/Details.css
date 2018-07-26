@@ -1,8 +1,10 @@
 .sp-content{
 	margin-top: 40px;
 }
-.sp1{
-	margin: 15px;
+.sp1 {
+	line-height: 35px;
+	font-size: 18px;
+	margin: 18px;
 	float: left;
 }
 .container-sp2{
@@ -54,7 +56,6 @@
 
 .input-quality{
 	display: flex;
-	-webkit-box-align: center;
 	align-items: center;
 }
 

@@ -1,7 +1,6 @@
-﻿.table-order {
-    text-align: center;
-    margin: auto;
-    line-height: 30px;
-    /* padding: 20px; */
-    border-collapse: collapse;
+﻿.sp1 {
+    margin-left: 75px;
+    float: none;
+    width: 20%;
+    height: 350px;
 }

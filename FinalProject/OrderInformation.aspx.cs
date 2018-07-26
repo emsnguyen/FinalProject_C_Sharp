@@ -53,7 +53,7 @@ namespace FinalProject
                     customer.Address = dr[4].ToString();
                     customer.Phone = dr[5].ToString();
                     customer.Email = dr[6].ToString();
-                    customer.FullName = dr[7].ToString();
+                    customer.FullName = dr[1].ToString();
                 }
                 connection.Close();
                 Session["CurrentCustomer"] = customer;

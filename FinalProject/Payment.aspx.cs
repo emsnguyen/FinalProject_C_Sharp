@@ -95,10 +95,13 @@ namespace FinalProject
                 int userID = customer.ID;
                 string orderDate = DateTime.Now.ToShortDateString();
                 double total = _calculateTotal();
+                DateTime deliver = DateTime.Now;
+                DateTime dueDate = DateTime.Now;
+
                 //create order
                 connection.Open();
-                SqlCommand q = new SqlCommand("insert into [PRN292_Project].[dbo].[Order] (UserID, OrderDate, Total) values ("
-                    + userID + ", '" + orderDate + "', " + total + ")", connection);
+                SqlCommand q = new SqlCommand("insert into [PRN292_Project].[dbo].[Order] values ("
+                    + userID + ", '" + orderDate + "', '" + deliver + "', '" + dueDate + "'," + total + ")", connection);
                 q.ExecuteNonQuery();
                 connection.Close();
                 //get orderId

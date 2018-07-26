@@ -31,13 +31,22 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.Label lblInfo;
         
         /// <summary>
-        /// loginLink control.
+        /// LoginLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink loginLink;
+        protected global::System.Web.UI.WebControls.HyperLink LoginLink;
+        
+        /// <summary>
+        /// linkLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton linkLogout;
         
         /// <summary>
         /// txtSearch control.

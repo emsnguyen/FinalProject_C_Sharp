@@ -14,16 +14,19 @@
 		#productID {
 			width: 113px;
 		}
+
 		.paging {
 			text-align: center;
-            font-size: 18px;
-            color: gray;
+			font-size: 18px;
+			color: gray;
 		}
-		.paging a {
-			padding: 0 15px;
-		}
-	    .currentPage {
-            color: black;
+
+			.paging a {
+				padding: 0 15px;
+			}
+
+		.currentPage {
+			color: black;
 			pointer-events: none;
 		}
 	</style>
@@ -31,41 +34,33 @@
 </head>
 <body>
 	<form id="form1" runat="server">
-		<div class="container">
-			<div class="cssmenu">
-				<ul>
-					<asp:Label ID="lblInfo" runat="server"></asp:Label>
-					<asp:HyperLink ID="loginLink" runat="server" NavigateUrl="~/Login.aspx">Log In</asp:HyperLink>
-				</ul>
-			</div>
-		</div>
+
 		<div class="header_bottom men_border">
 			<div class="container">
 				<div class="col-xs-8 header-bottom-left">
 					<div class="col-xs-2 logo">
-						<h1><a href="Home.aspx"><span>Home</span></a></h1>
+						<h1><a href="Home.aspx"><span>Trang chủ</span></a></h1>
 					</div>
 					<div class="col-xs-6 menu">
 						<ul class="megamenu skyblue">
-							<li class="grid"><a class="color2" href="Other.aspx">Phụ kiện</a>
-								<div class="megapanel">
-									<div class="row">
-										<div class="col1">
-											<div class="h_nav">
-											</div>
-										</div>
-										<div class="col1">
-											<div class="h_nav">
-											</div>
-										</div>
-										<div class="col1">
-											<div class="h_nav">
-											</div>
-										</div>
-									</div>
-								</div>
+							<li class="grid"><a class="color2" href="Other.aspx">Phụ kiện</a></li>
+							<li>
+								<asp:Label ID="lblInfo" runat="server"></asp:Label>
+								<% if (Session["userID"] == null)
+									{ %>
+								<asp:HyperLink ID="LoginLink" 
+									CssClass="color1"
+									runat="server" NavigateUrl="~/Login.aspx">Đăng nhập</asp:HyperLink>
+								<%}
+								else
+								{%>
+								<asp:LinkButton ID="linkLogout" 
+									CssClass="color1"
+									runat="server" OnClick="linkLogout_Click"
+									>Đăng xuất</asp:LinkButton>
+								<%} %>
+
 							</li>
-							<li><a class="color6" href="CheckOut.aspx">Check Out</a></li>
 						</ul>
 					</div>
 				</div>
@@ -73,7 +68,7 @@
 					<div class="box_1-cart">
 						<div class="box_11">
 							<a href="Cart.aspx">
-								<h4>Cart: <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)
+								<h4>Giỏ hàng: <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span> <%= TotalItems  %>)
 									<img src="images/bag.png" alt="" /><span class="clearfix"></span>
 								</h4>
 							</a>
@@ -91,7 +86,7 @@
 		</div>
 		<div class="sp-content">
 			<div class="container">
-                <%="" %>
+				<%="" %>
 				<% foreach (var item in list)
 					{ %>
 				<div class="sp1">
@@ -109,7 +104,7 @@
 								<br>
 							</div>
 							<div class="infor-sp1-r">
-								<p><%=item.Price %>đ</p>
+								<p><%=String.Format("{0:n}", item.Price) %>đ</p>
 								<a href="Details.aspx?productID=<%= item.ID%>">Xem</a>
 								<br />
 							</div>

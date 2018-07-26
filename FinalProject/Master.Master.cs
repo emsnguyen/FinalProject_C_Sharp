@@ -10,25 +10,20 @@ namespace FinalProject
 {
     public partial class Master : System.Web.UI.MasterPage
     {
-
+        public int TotalItems { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            string username = "";
-            try
+            List<OrderDetail> orderDetails = Session["cart"] as List<OrderDetail>;
+            if (orderDetails != null)
             {
-                username = Session["username"].ToString();
-                lblInfo.Text = "Hello " + username + " !";
+                TotalItems = orderDetails.Count;
             }
-            catch (NullReferenceException ex)
-            {
-                Console.WriteLine(ex);
-            }
-            if (!string.IsNullOrEmpty(lblInfo.Text))
-            {
-                loginLink.Text = "Log Out";
-            }
+
         }
 
-
+        protected void linkLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+        }
     }
 }

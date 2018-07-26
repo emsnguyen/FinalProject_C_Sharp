@@ -39,7 +39,7 @@
                             <br>
 
 
-                            <p><span style="font-weight: lighter; font-size: 13px;">Service Charges : <span></p>
+                            <p><span style="font-weight: lighter; font-size: 13px;">Service Charges : </span></p>
 
 
                             <div class="clear"></div>

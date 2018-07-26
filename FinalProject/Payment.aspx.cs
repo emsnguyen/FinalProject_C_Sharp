@@ -16,24 +16,20 @@ namespace FinalProject
         string cntStr = WebConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         public SqlConnection connection;
         private User customer;
-        private List<CartItem> cartItems;
+        private List<OrderDetail> cartItems;
         protected void Page_Load(object sender, EventArgs e)
         {
             connection = new SqlConnection(cntStr);
             if (!Page.IsPostBack)
             {
-                cartItems = new List<CartItem>();
-                cartItems.Add(new CartItem(1, "Đàn Guitar Acoustic FENDER – FA-100", 3, 5600000));
-                cartItems.Add(new CartItem(2, "FENDER – FA-100", 3, 5600000));
+                cartItems = (List<OrderDetail>)Session["cart"];
                 customer = (User)Session["CurrentCustomer"];
                 _displayDeliveryInfo();
                 _displayProductList();
                 _displayOrderInfo();
             } else
             {
-                cartItems = new List<CartItem>();
-                cartItems.Add(new CartItem(1, "Đàn Guitar Acoustic FENDER – FA-100", 3, 5600000));
-                cartItems.Add(new CartItem(2, "FENDER – FA-100", 3, 5600000));
+                cartItems = (List<OrderDetail>)Session["cart"];
                 customer = (User)Session["CurrentCustomer"];
                 _displayDeliveryInfo();
                 _displayProductList();
@@ -55,15 +51,11 @@ namespace FinalProject
         {
             DataTable t = new DataTable();
             t.Columns.Add("productID", typeof(int));
-            t.Columns.Add("productName", typeof(string));
             t.Columns.Add("quantity", typeof(int));
             t.Columns.Add("price", typeof(float));
-            if (cartItems.Count != 0)
+            foreach(OrderDetail item in cartItems)
             {
-                CartItem item = cartItems[0];
-                t.Rows.Add(item.ProductID, item.ProductName, item.Quantity, item.Price);
-                CartItem item2 = cartItems[1];
-                t.Rows.Add(item2.ProductID, item2.ProductName, item2.Quantity, item2.Price);
+                t.Rows.Add(item.ProductID, item.Quantity, item.Total);
             }
             GridView1.DataSource = t;
             GridView1.DataBind();
@@ -72,10 +64,10 @@ namespace FinalProject
         private void _displayOrderInfo()
         {
             //get sub total
-            float subTotal = 0;
-            foreach(CartItem item in cartItems)
+            double subTotal = 0;
+            foreach(OrderDetail item in cartItems)
             {
-                subTotal += item.Price;
+                subTotal += item.Total;
             }
             subtotalPrice.Text = Decimal.Parse(Convert.ToString(subTotal), System.Globalization.NumberStyles.Float) + " VND";
             //get discount
@@ -102,7 +94,7 @@ namespace FinalProject
             {
                 int userID = customer.ID;
                 string orderDate = DateTime.Now.ToShortDateString();
-                float total = _calculateTotal();
+                double total = _calculateTotal();
                 //create order
                 connection.Open();
                 SqlCommand q = new SqlCommand("insert into [PRN292_Project].[dbo].[Order] (UserID, OrderDate, Total) values ("
@@ -119,10 +111,10 @@ namespace FinalProject
                 orderID = Convert.ToInt32(t.Rows[0][0].ToString());
                 //create order detail
                 connection.Open();
-                foreach(CartItem item in cartItems)
+                foreach(OrderDetail item in cartItems)
                 {
                     SqlCommand z = new SqlCommand("insert into OrderDetail (OrderID, ProductID, Quantity, Total) values ("
-                    + orderID + ", " + item.ProductID + ", " + item.Quantity + ", " + item.Price + ")", connection);
+                    + orderID + ", " + item.ProductID + ", " + item.Quantity + ", " + item.Total + ")", connection);
                     z.ExecuteNonQuery();
                 }
                 connection.Close();
@@ -156,12 +148,12 @@ namespace FinalProject
             }
         }
 
-        private float _calculateTotal()
+        private double _calculateTotal()
         {
-            float total = 0f;
-            foreach(CartItem item in cartItems)
+            double total = 0;
+            foreach(OrderDetail item in cartItems)
             {
-                total += item.Price;
+                total += item.Total;
             }
             return total;
         }

@@ -21,22 +21,19 @@ namespace FinalProject
             connection = new SqlConnection(cntStr);
             if(!Page.IsPostBack)
             {
-                Session["id"] = 2;
                 _displayDeliverInfo();
                 InfoDiv.Visible = false;
             } else
             {
-                Session["id"] = 2;
                 _displayDeliverInfo();
             }
         }
 
         private void _getCustomer()
         {
-            Debug.WriteLine(">>>>>>Here");
             //check if customer is logged in
-            int userId = Convert.ToInt32(Session["id"]);
-            if(userId == 0)
+            int userId = Convert.ToInt32(Session["userId]);
+            if (userId == 0)
             {
                 //redirect to login page
                 Response.Redirect("login.aspx");

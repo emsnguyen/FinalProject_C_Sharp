@@ -99,12 +99,9 @@
                     <asp:Button ID="Button3" runat="server" Text="Edit" Width="100px" OnClick="Button3_Click" />
                     <br />
                     ----------------------------------------------------------------------------------------------------<br />
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="417px">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="296px">
                         <Columns>
-                            <asp:BoundField DataField="productID" HeaderText="ID" >
-                            <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="50px" />
-                            </asp:BoundField>
-                            <asp:HyperLinkField DataNavigateUrlFields="productID" DataNavigateUrlFormatString="Details.aspx?id={0}" DataTextField="productName" HeaderText="Product" />
+                            <asp:HyperLinkField DataNavigateUrlFields="ProductID" DataNavigateUrlFormatString="Details.aspx?productID={0}" DataTextField="ProductID" HeaderText="ID" />
                             <asp:BoundField DataField="quantity" HeaderText="Quantity" >
                             <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="80px" />
                             </asp:BoundField>

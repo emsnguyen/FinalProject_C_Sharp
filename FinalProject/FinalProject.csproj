@@ -22,7 +22,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.9</TypeScriptToolsVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -190,24 +190,6 @@
     <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="LimitedAccess.aspx.cs">
       <DependentUpon>LimitedAccess.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\UserDAO.cs" />
-    <Compile Include="LimitedAccess.aspx.cs">
-      <DependentUpon>LimitedAccess.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LimitedAccess.aspx.designer.cs">
-      <DependentUpon>LimitedAccess.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SearchProduct.aspx.cs">
-      <DependentUpon>SearchProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SearchProduct.aspx.designer.cs">
-      <DependentUpon>SearchProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LimitedAccess.aspx.designer.cs">
@@ -281,13 +263,6 @@
     <Compile Include="ViewOrders.aspx.designer.cs">
       <DependentUpon>ViewOrders.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -308,13 +283,6 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Details.aspx.cs">
-      <DependentUpon>Details.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Details.aspx.designer.cs">
-      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

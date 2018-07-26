@@ -190,6 +190,7 @@
     <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="LimitedAccess.aspx.cs">
       <DependentUpon>LimitedAccess.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="LimitedAccess.aspx.cs">
       <DependentUpon>LimitedAccess.aspx</DependentUpon>

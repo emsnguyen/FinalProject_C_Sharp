@@ -13,7 +13,7 @@
                                 <asp:Label ID="Label2" runat="server" Text="Customer's name:"></asp:Label>
                             </td>
                             <td style="height: 20px">
-                                <asp:Label ID="customerName" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="customerName" runat="server" Text="Label" Font-Bold="True"></asp:Label>
                             </td>
                         </tr>
                         <tr>

@@ -24,14 +24,16 @@ namespace FinalProject
             {
                 cartItems = new List<CartItem>();
                 cartItems.Add(new CartItem(1, "Đàn Guitar Acoustic FENDER – FA-100", 3, 5600000));
+                cartItems.Add(new CartItem(2, "FENDER – FA-100", 3, 5600000));
                 customer = (User)Session["CurrentCustomer"];
                 _displayDeliveryInfo();
                 _displayProductList();
-
+                _displayOrderInfo();
             } else
             {
                 cartItems = new List<CartItem>();
                 cartItems.Add(new CartItem(1, "Đàn Guitar Acoustic FENDER – FA-100", 3, 5600000));
+                cartItems.Add(new CartItem(2, "FENDER – FA-100", 3, 5600000));
                 customer = (User)Session["CurrentCustomer"];
                 _displayDeliveryInfo();
                 _displayProductList();
@@ -42,10 +44,10 @@ namespace FinalProject
         {
             if (customer != null)
             {
-                customerName.Text = customer.FullName;
-                address.Text = customer.Address;
-                email.Text = customer.Email;
-                phoneNumber.Text = customer.Phone;
+                customerName.Text = "Name: " + customer.FullName;
+                address.Text = "Address: " + customer.Address;
+                email.Text = "Email: " + customer.Email;
+                phoneNumber.Text = "Phone: " + customer.Phone;
             }
         }
 
@@ -60,9 +62,26 @@ namespace FinalProject
             {
                 CartItem item = cartItems[0];
                 t.Rows.Add(item.ProductID, item.ProductName, item.Quantity, item.Price);
+                CartItem item2 = cartItems[1];
+                t.Rows.Add(item2.ProductID, item2.ProductName, item2.Quantity, item2.Price);
             }
             GridView1.DataSource = t;
             GridView1.DataBind();
+        }
+
+        private void _displayOrderInfo()
+        {
+            //get sub total
+            float subTotal = 0;
+            foreach(CartItem item in cartItems)
+            {
+                subTotal += item.Price;
+            }
+            subtotalPrice.Text = Decimal.Parse(Convert.ToString(subTotal), System.Globalization.NumberStyles.Float) + " VND";
+            //get discount
+            discountAmount.Text = "0 %";
+            //total
+            totalPrice.Text = Decimal.Parse(Convert.ToString(subTotal), System.Globalization.NumberStyles.Float) + " VND";
         }
 
         protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
@@ -150,6 +169,16 @@ namespace FinalProject
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("Home.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cart.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("OrderInformation.aspx");
         }
     }
 }

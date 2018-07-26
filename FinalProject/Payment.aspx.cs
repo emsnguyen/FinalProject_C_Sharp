@@ -52,10 +52,10 @@ namespace FinalProject
             DataTable t = new DataTable();
             t.Columns.Add("productID", typeof(int));
             t.Columns.Add("quantity", typeof(int));
-            t.Columns.Add("price", typeof(float));
+            t.Columns.Add("price", typeof(double));
             foreach(OrderDetail item in cartItems)
             {
-                t.Rows.Add(item.ProductID, item.Quantity, item.Total);
+                t.Rows.Add(item.Product.ID, item.Quantity, item.Total);
             }
             GridView1.DataSource = t;
             GridView1.DataBind();
@@ -114,7 +114,7 @@ namespace FinalProject
                 foreach(OrderDetail item in cartItems)
                 {
                     SqlCommand z = new SqlCommand("insert into OrderDetail (OrderID, ProductID, Quantity, Total) values ("
-                    + orderID + ", " + item.ProductID + ", " + item.Quantity + ", " + item.Total + ")", connection);
+                    + orderID + ", " + item.Product.ID + ", " + item.Quantity + ", " + item.Total + ")", connection);
                     z.ExecuteNonQuery();
                 }
                 connection.Close();
@@ -133,6 +133,7 @@ namespace FinalProject
                     + orderID + ", " + paymentID + ", '" + cardNumber + "')", connection);
                     y.ExecuteNonQuery();
                     connection.Close();
+                    Session["cart"] = null;
                     //redirect to processing page
                     Response.Redirect("Transaction.aspx");
                 } else
@@ -142,6 +143,7 @@ namespace FinalProject
                     + orderID + ", " + paymentID + ")", connection);
                     z.ExecuteNonQuery();
                     connection.Close();
+                    Session["cart"] = null;
                     //redirect to message page
                     Response.Redirect("OrderSuccessPage.aspx");
                 }

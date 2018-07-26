@@ -101,7 +101,7 @@
                     ----------------------------------------------------------------------------------------------------<br />
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="296px">
                         <Columns>
-                            <asp:HyperLinkField DataNavigateUrlFields="ProductID" DataNavigateUrlFormatString="Details.aspx?productID={0}" DataTextField="ProductID" HeaderText="ID" />
+                            <asp:HyperLinkField DataNavigateUrlFields="productID" DataNavigateUrlFormatString="Details.aspx?productID={0}" DataTextField="productID" HeaderText="ID" />
                             <asp:BoundField DataField="quantity" HeaderText="Quantity" >
                             <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="80px" />
                             </asp:BoundField>

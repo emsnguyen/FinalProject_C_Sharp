@@ -32,29 +32,43 @@ namespace FinalProject
         {
             int productID = Convert.ToInt32(Request["productID"]);
             int quantity = Convert.ToInt32(Request["quantity"]);
-
-
             if (Session["cart"] == null)
             {
                 Session["cart"] = new List<OrderDetail>();
             }
             orders = Session["cart"] as List<OrderDetail>;
-            if (!IsExistProduct(orders, productID))
+            if (productID != 0)
             {
-                Product product = ProductDAO.GetProductByID(productID);
-                OrderDetail od = new OrderDetail
+                if (!IsExistProduct(orders, productID))
                 {
-                    Product = product,
-                    Quantity = quantity
-                };
-
-                orders.Add(od);
-                Session["cart"] = orders;
-                foreach (OrderDetail o in orders)
-                {
-                    //Label1.Text += o.ToString();
+                    Product product = ProductDAO.GetProductByID(productID);
+                    OrderDetail od = new OrderDetail
+                    {
+                        Product = product,
+                        Quantity = quantity,
+                        Total = (double)product.Price * quantity
+                    };
+                    orders.Add(od);
+                    Session["cart"] = orders;
                 }
-
+                else
+                {
+                    foreach (OrderDetail o in orders)
+                    {
+                        if (o.Product.ID == productID)
+                        {
+                            o.Quantity += quantity;
+                            o.Total = (double)o.Product.Price * o.Quantity;
+                        }
+                    }
+                    Session["cart"] = orders;
+                }
+            } else
+            {
+                if(orders.Count == 0)
+                {
+                    return;
+                } 
             }
         }
 

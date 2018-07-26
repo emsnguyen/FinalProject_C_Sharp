@@ -32,7 +32,7 @@ namespace FinalProject
         private void _getCustomer()
         {
             //check if customer is logged in
-            int userId = Convert.ToInt32(Session["userId]);
+            int userId = Convert.ToInt32(Session["userId"]);
             if (userId == 0)
             {
                 //redirect to login page

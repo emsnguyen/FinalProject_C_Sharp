@@ -6,7 +6,7 @@ namespace FinalProject.Utils
     {
         public static string GenerateHyperlink(int value, string display)
         {
-            string result = $"<a href = \"Home?page={value}\">{display}</a>";
+            string result = $"<a href = \"Home.aspx?page={value}\">{display}</a>";
             return result;
         }
         public static string Paging(int currentPage, int pageGap, int totalPage)
@@ -20,8 +20,8 @@ namespace FinalProject.Utils
             {
                 result += GenerateHyperlink(i, "" + i);
             }
-            result += $"<a href = \"Home?page={currentPage}\" class=\"currentPage\">{currentPage}</a>";
-            for (int i = currentPage + 1; i < Math.Min(totalPage, currentPage + pageGap); i++)
+            result += $"<a href = \"Home.aspx?page={currentPage}\" class=\"currentPage\">{currentPage}</a>";
+            for (int i = currentPage + 1; i <= Math.Min(totalPage, currentPage + pageGap); i++)
             {
                 result += GenerateHyperlink(i, "" + i);
             }

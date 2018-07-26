@@ -63,11 +63,10 @@ body a{
     color:#999;
 	width:150px;
 	padding:7px;
-	-webkit-apperance:none;
+	-webkit-appearance:none;
 	margin:0;
 	-webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease-out;
-	-ms-transition: all 0.5s ease-out;
 	-o-transition: all 0.5s ease-out;
 }
 .search input[type="text"]:focus{
@@ -104,8 +103,6 @@ body a{
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
 	width: 100%;
 	outline:none;
 }
@@ -132,7 +129,6 @@ body a{
 .cssmenu {
 	margin-top: 3px;
     width: 833px;
-    height: 68px;
 }
 .cssmenu ul {
 	float: right;
@@ -184,7 +180,7 @@ body a{
 	font-size: 1.5em;
 	color:#000;
 	line-height: 1.8em;
-	text-transform:uppercase
+	text-transform:uppercase;
 	margin-bottom: 4%;
 }
 .h_nav h4.top{
@@ -288,9 +284,6 @@ body a{
 /*-- search Box --*/
 .banner {
 	background: url(../images/banner.jpg) no-repeat center top;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 	background-position: center;
 	min-height:500px;

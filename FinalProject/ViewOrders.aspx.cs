@@ -12,7 +12,18 @@ namespace FinalProject
         string connectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["isAdmin"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
+            else
+            {
+                bool isAdmin = (bool)Session["isAdmin"];
+                if (!isAdmin)
+                {
+                    Response.Redirect("~/LimitedAccess.aspx");
+                }
+            }
         }
         void LoadOrders()
         {

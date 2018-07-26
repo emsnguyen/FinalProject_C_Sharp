@@ -10,7 +10,7 @@
 namespace FinalProject {
     
     
-    public partial class Masterr {
+    public partial class Master {
         
         /// <summary>
         /// form1 control.

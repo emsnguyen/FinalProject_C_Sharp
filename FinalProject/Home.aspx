@@ -16,11 +16,14 @@
 		}
 		.paging {
 			text-align: center;
+            font-size: 18px;
+            color: gray;
 		}
 		.paging a {
-			padding: 10px;
+			padding: 0 15px;
 		}
-		.currentPage {
+	    .currentPage {
+            color: black;
 			pointer-events: none;
 		}
 	</style>
@@ -29,14 +32,11 @@
 <body>
 	<form id="form1" runat="server">
 		<div class="container">
-			<div class="one-fifth column row_1">
-			</div>
 			<div class="cssmenu">
 				<ul>
 					<asp:Label ID="lblInfo" runat="server"></asp:Label>
 					<asp:HyperLink ID="loginLink" runat="server" NavigateUrl="~/Login.aspx">Log In</asp:HyperLink>
 				</ul>
-
 			</div>
 		</div>
 		<div class="header_bottom men_border">
@@ -65,7 +65,6 @@
 									</div>
 								</div>
 							</li>
-							<li><a class="color6" href="ViewOrders.aspx">View Orders</a></li>
 							<li><a class="color6" href="CheckOut.aspx">Check Out</a></li>
 						</ul>
 					</div>
@@ -92,6 +91,7 @@
 		</div>
 		<div class="sp-content">
 			<div class="container">
+                <%="" %>
 				<% foreach (var item in list)
 					{ %>
 				<div class="sp1">
@@ -109,7 +109,7 @@
 								<br>
 							</div>
 							<div class="infor-sp1-r">
-								<p><%=item.Price %>d</p>
+								<p><%=item.Price %>đ</p>
 								<a href="Details.aspx?productID=<%= item.ID%>">Xem</a>
 								<br />
 							</div>

@@ -8,9 +8,9 @@ using FinalProject.DAL;
 using FinalProject.Models;
 namespace FinalProject
 {
-    public partial class Masterr : System.Web.UI.MasterPage
+    public partial class Master : System.Web.UI.MasterPage
     {
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string username = "";
@@ -29,6 +29,6 @@ namespace FinalProject
             }
         }
 
-        
+
     }
 }

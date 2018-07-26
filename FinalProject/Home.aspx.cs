@@ -10,18 +10,27 @@ namespace FinalProject
         public Product test;
         ProductDAO productDao;
         public int CurrentPage { get; set; }
-        public int PageGap { get; set; } = 4;
+        public int PageGap { get; set; } = 3;
         public int TotalPage { get; set; }
+        const int PageSize = 5;
         protected void Page_Load(object sender, EventArgs e)
         {
             productDao = new ProductDAO();
-            CurrentPage = Convert.ToInt32(Request["page"]);
-            TotalPage = productDao.GetTotalGuitar();
+            if (Request["page"] == null)
+            {
+                CurrentPage = 1;
+            }
+            else
+            {
+                CurrentPage = Convert.ToInt32(Request["page"]);
+            }
+            int start = (CurrentPage - 1) * PageSize + 1;
+            int end = start + PageSize - 1;
+            int totalRecords = productDao.GetTotalGuitar();
+            TotalPage = totalRecords / PageSize + (totalRecords % PageSize > 0 ? 1 : 0);
             if (!IsPostBack)
             {
-
-                list = productDao.GetList10Guitar();
-                this.DataBind();
+                list = productDao.GetGuitarList(start, end);
             }
             else
             {

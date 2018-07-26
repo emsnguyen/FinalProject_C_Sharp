@@ -16,17 +16,17 @@ namespace FinalProject.DAL
             List<Product> list = new List<Product>();
             con = new SqlConnection(connectionString);
             string query = @"SELECT TOP (10) p.ID
-          ,p.Name
-          ,[DateImported]
-          ,[Description]
-          ,[TotalSold]
-        ,[TotalLeft]
-      ,[Image]
-      ,[SubCategoryID]
-      ,[MakerID]
-      ,[Price]
-  FROM Product as p inner join SubCategory as s
-  on p.SubCategoryID = s.ID  where s.CategoryID=1";
+                                    ,p.Name
+                                    ,[DateImported]
+                                    ,[Description]
+                                    ,[TotalSold]
+                                ,[TotalLeft]
+                                ,[Image]
+                                ,[SubCategoryID]
+                                ,[MakerID]
+                                ,[Price]
+                            FROM Product as p inner join SubCategory as s
+                            on p.SubCategoryID = s.ID  where s.CategoryID=1";
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -51,7 +51,7 @@ namespace FinalProject.DAL
             return list;
         }
         //select guitars based on paging
-        public List<Product> GetGuitarList(int start, int end, int pageSize)
+        public List<Product> GetGuitarList(int start, int end)
         {
             List<Product> guitars = new List<Product>();
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -77,9 +77,8 @@ namespace FinalProject.DAL
                                       ,[SubCategoryID]
                                       ,[MakerID]
                                       ,[Price]
-                                  FROM [Product] p, SubCategory sub, Category c
-                                  WHERE p.SubCategoryID = sub.CategoryID AND c.ID = sub.CategoryID 
-                                  AND c.ID = 1
+                                  FROM [Product] p, SubCategory sub
+                                  WHERE p.SubCategoryID = sub.ID AND sub.CategoryID = 1
                                   ) AS X
                                   WHERE RN between @start and @end
                                 ";

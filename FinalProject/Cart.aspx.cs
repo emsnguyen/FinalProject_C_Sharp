@@ -26,13 +26,13 @@ namespace FinalProject
             return false;
         }
         //edit quantity
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             int productID = Convert.ToInt32(Request["productID"]);
             int quantity = Convert.ToInt32(Request["quantity"]);
-            
+
 
             if (Session["cart"] == null)
             {
@@ -54,7 +54,7 @@ namespace FinalProject
                 {
                     //Label1.Text += o.ToString();
                 }
-                
+
             }
         }
 

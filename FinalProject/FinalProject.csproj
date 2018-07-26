@@ -244,30 +244,21 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <Compile Include="Utils\HtmlHelper.cs" />
+    <Compile Include="ViewOrders.aspx.cs">
+      <DependentUpon>ViewOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewOrders.aspx.designer.cs">
+      <DependentUpon>ViewOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -281,14 +272,6 @@
     </Compile>
     <Compile Include="Transaction.aspx.designer.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\HtmlHelper.cs" />
-    <Compile Include="ViewOrders.aspx.cs">
-      <DependentUpon>ViewOrders.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewOrders.aspx.designer.cs">
-      <DependentUpon>ViewOrders.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

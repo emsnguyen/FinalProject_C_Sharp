@@ -38,6 +38,9 @@
                     </div>
                 </div>
             </div>
+            <div class="sp1">
+                <%= product.Description %>
+            </div>
         </div>
     </div>
 </asp:Content>

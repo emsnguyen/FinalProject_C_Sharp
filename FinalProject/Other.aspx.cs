@@ -11,7 +11,6 @@ namespace FinalProject
 {
     public partial class Other : System.Web.UI.Page
     {
-
         public List<Product> list;
         public Product test;
         ProductDAO productDao;
@@ -19,8 +18,18 @@ namespace FinalProject
         public int PageGap { get; set; } = 3;
         public int TotalPage { get; set; }
         const int PageSize = 5;
+        public int TotalItems { get; set; }
+        void GetTotalItems()
+        {
+            List<OrderDetail> orderDetails = Session["cart"] as List<OrderDetail>;
+            if (orderDetails != null)
+            {
+                TotalItems = orderDetails.Count;
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
+            GetTotalItems();
             productDao = new ProductDAO();
             if (Request["page"] == null)
             {
@@ -42,21 +51,6 @@ namespace FinalProject
             {
                 btnSearch_Click(null, null);
             }
-
-            string username = "";
-            try
-            {
-                username = Session["username"].ToString();
-                lblInfo.Text = "Hello " + username + " !";
-            }
-            catch (NullReferenceException ex)
-            {
-                Console.WriteLine(ex);
-            }
-            if (!string.IsNullOrEmpty(lblInfo.Text))
-            {
-                loginLink.Text = "Log Out";
-            }
         }
         protected void btnDetail_Click(object sender, EventArgs e)
         {
@@ -71,6 +65,11 @@ namespace FinalProject
             string search = txtSearch.Text.Trim();
             list = productDao.getListOtherContainString(search);
             this.DataBind();
+        }
+
+        protected void linkLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
         }
     }
 }
